@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Notice · Penleigh International</title>
+<meta name="description" content="How Penleigh International collects, uses and protects personal data. Our privacy notice covering website visitors, candidates and clients." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/privacy">
+<meta property="og:title" content="Privacy Notice · Penleigh International">
+<meta property="og:description" content="How Penleigh International collects, uses and protects personal data.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Notice · Penleigh International">
+<meta name="twitter:description" content="How Penleigh International collects, uses and protects personal data.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* PAGE HERO — short, quiet for legal docs */
+  .page-hero {
+    background: var(--paper-warm);
+    color: var(--ink);
+    padding: 160px 0 60px;
+    border-bottom: 1px solid rgba(10,13,16,0.08);
+  }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 28px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { color: var(--amber); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--navy); }
+  .page-hero .meta {
+    font-size: 14px;
+    color: var(--steel);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .page-hero .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .page-hero .meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
+
+  /* CONTENT layout */
+  .doc {
+    padding: 80px 0 120px;
+  }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .doc-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  /* TOC */
+  .toc {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+  @media (max-width: 960px) {
+    .toc { position: static; padding: 24px; background: var(--paper-warm); border-radius: 4px; }
+  }
+  .toc h6 {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .toc h6 .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--amber);
+  }
+  .toc ol { list-style: none; counter-reset: section; }
+  .toc li {
+    counter-increment: section;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .toc a {
+    display: flex;
+    gap: 12px;
+    padding: 6px 0;
+    font-size: 13.5px;
+    color: var(--steel);
+    transition: color 0.2s;
+    align-items: baseline;
+  }
+  .toc a::before {
+    content: counter(section, decimal-leading-zero);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12px;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .toc a:hover, .toc a.active { color: var(--ink); }
+
+  /* DOCUMENT body */
+  .doc-body {
+    max-width: 68ch;
+  }
+  .doc-body section { padding: 0; margin-bottom: 56px; scroll-margin-top: 100px; }
+  .doc-body h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(10,13,16,0.15);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .doc-body h2 .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--amber);
+  }
+  .doc-body h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .doc-body p {
+    color: #2a3038;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .doc-body p strong { color: var(--ink); font-weight: 500; }
+  .doc-body ul {
+    list-style: none;
+    margin: 16px 0 24px;
+  }
+  .doc-body ul li {
+    color: #2a3038;
+    font-size: 16px;
+    line-height: 1.65;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .doc-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 12px; height: 1px;
+    background: var(--amber);
+  }
+  .doc-body a {
+    color: var(--navy);
+    border-bottom: 1px solid rgba(17,38,74,0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .doc-body a:hover { border-color: var(--navy); }
+
+  /* Definition box / aside */
+  .doc-aside {
+    background: var(--paper-warm);
+    border-left: 2px solid var(--amber);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .doc-aside p { font-size: 14.5px; line-height: 1.65; color: var(--steel); margin-bottom: 0; }
+  .doc-aside p strong { color: var(--ink); }
+
+  /* Definition list for things like data-purpose-basis-retention */
+  dl.doc-defs {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 12px 24px;
+    margin: 16px 0 24px;
+    padding: 24px;
+    background: var(--paper-warm);
+    border-radius: 4px;
+    font-size: 14.5px;
+  }
+  @media (max-width: 540px) { dl.doc-defs { grid-template-columns: 1fr; gap: 4px 0; } }
+  dl.doc-defs dt {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    font-weight: 500;
+    padding-top: 4px;
+  }
+  dl.doc-defs dd {
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  dl.doc-defs dd + dt { padding-top: 14px; border-top: 1px solid rgba(10,13,16,0.1); margin-top: 6px; }
+  @media (max-width: 540px) {
+    dl.doc-defs dd { margin-bottom: 14px; }
+    dl.doc-defs dd + dt { padding-top: 0; border-top: none; margin-top: 0; }
+  }
+
+  /* CTA back to contact */
+  .doc-end {
+    margin-top: 72px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(10,13,16,0.15);
+  }
+  .doc-end p { color: var(--steel); margin-bottom: 8px; }
+  .doc-end a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="/" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/retained-search">Services</a>
+      <a href="/#process">Process</a>
+      <a href="/#markets">Markets</a>
+      <a href="/contact" class="nav-cta">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--ink);">Privacy Notice</span>
+    </div>
+    <h1>Privacy <em>Notice</em></h1>
+    <div class="meta">
+      <span><span class="dot"></span>Last updated: 29 April 2026</span>
+      <span><span class="dot"></span>Version 1.0</span>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="container">
+    <div class="doc-grid">
+
+      <aside class="toc">
+        <h6><span class="num">§</span> Contents</h6>
+        <ol>
+          <li><a href="#who-we-are">Who we are</a></li>
+          <li><a href="#scope">Who this notice is for</a></li>
+          <li><a href="#what-we-collect">What we collect</a></li>
+          <li><a href="#why-and-how">Why and how we use it</a></li>
+          <li><a href="#sharing">Who we share it with</a></li>
+          <li><a href="#international">International transfers</a></li>
+          <li><a href="#retention">How long we keep it</a></li>
+          <li><a href="#security">How we protect it</a></li>
+          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#cookies">Cookies and analytics</a></li>
+          <li><a href="#changes">Changes to this notice</a></li>
+          <li><a href="#contact-dpo">How to contact us</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body">
+
+        <p style="font-size: 17px; line-height: 1.65; color: var(--steel); margin-bottom: 32px;">This notice explains how Penleigh International Limited (&ldquo;Penleigh&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses and protects personal data when you visit our website, contact us, or engage with us as a candidate or client.</p>
+
+        <div class="doc-aside">
+          <p>We are the <strong>data controller</strong> for the personal data described in this notice. That means we&rsquo;re responsible for deciding how it&rsquo;s collected and used, and for protecting your rights as a data subject.</p>
+        </div>
+
+        <section id="who-we-are">
+          <h2><span class="num">01</span> Who we are</h2>
+          <p>Penleigh International Limited is a private limited company registered in England and Wales (company number 12442642). Our registered office is 32 Park Cross Street, Leeds, LS1 2QH, United Kingdom.</p>
+          <p>We act as a recruitment business under the Conduct of Employment Agencies and Employment Businesses Regulations 2003. We are a one-person consultancy led by James Leigh.</p>
+        </section>
+
+        <section id="scope">
+          <h2><span class="num">02</span> Who this notice is for</h2>
+          <p>This notice covers personal data we hold about three groups of people:</p>
+          <ul>
+            <li><strong>Website visitors</strong> &mdash; anyone who visits penleighinternational.com or sends us a message via the contact form.</li>
+            <li><strong>Candidates</strong> &mdash; individuals whose details we hold for the purpose of executive search, including those we approach directly, those who approach us, and those represented in market mapping reports.</li>
+            <li><strong>Clients and prospective clients</strong> &mdash; the named contacts at organisations who engage us for retained search or market mapping, or who enquire about doing so.</li>
+          </ul>
+          <p>Where we&rsquo;ve been engaged for a specific search or mapping project, the engagement contract may set out additional or more specific terms about how we process personal data on that project. Where there&rsquo;s any conflict between this notice and an engagement contract, the engagement contract takes precedence for that project.</p>
+        </section>
+
+        <section id="what-we-collect">
+          <h2><span class="num">03</span> What we collect</h2>
+
+          <h3>From website visitors</h3>
+          <p>When you submit our contact form, we collect the information you provide: your name, company, email address, phone number (if you give it), the type of enquiry, the market it relates to, and the message you write. We also collect basic technical data automatically &mdash; your IP address, browser type and the page you submitted from &mdash; through our hosting provider for security and abuse-prevention purposes.</p>
+
+          <h3>From candidates</h3>
+          <p>For the purpose of executive search, we collect and process information such as: name, contact details, current and previous roles, employment history, education, qualifications, references, salary expectations, geographic preferences, and the results of competency and behavioural assessments completed via our HireInsight platform. We may also record video introductions where candidates choose to provide them.</p>
+          <p>We collect this information from a combination of: the candidate themselves, public professional sources (LinkedIn, company websites, industry directories), referrals, and our own industry network.</p>
+
+          <h3>From clients and prospects</h3>
+          <p>We collect the contact details of the individuals at client organisations who instruct us, alongside notes of our discussions, the briefs we receive, and records of the work we do on each engagement. Where clients provide information about their internal teams or organisational context, we treat that as confidential commercial information and process it solely for the purpose of the engagement.</p>
+        </section>
+
+        <section id="why-and-how">
+          <h2><span class="num">04</span> Why and how we use it</h2>
+          <p>We process personal data only where we have a lawful basis to do so under the UK GDPR. The table below summarises the main processing activities.</p>
+
+          <dl class="doc-defs">
+            <dt>Activity</dt><dd>Responding to website enquiries</dd>
+            <dt>Lawful basis</dt><dd>Legitimate interests &mdash; replying to a person who has actively contacted us</dd>
+            <dt>Retention</dt><dd>Up to 24 months from last contact, then deleted unless an engagement begins</dd>
+          </dl>
+
+          <dl class="doc-defs">
+            <dt>Activity</dt><dd>Identifying, approaching and assessing candidates for client searches</dd>
+            <dt>Lawful basis</dt><dd>Legitimate interests &mdash; recruitment in the relevant industries; or consent where the candidate has actively registered with us</dd>
+            <dt>Retention</dt><dd>While the candidate is reasonably considered active in our network, with periodic review (see Section 7)</dd>
+          </dl>
+
+          <dl class="doc-defs">
+            <dt>Activity</dt><dd>Delivering retained search and market mapping engagements to clients</dd>
+            <dt>Lawful basis</dt><dd>Performance of a contract with the client; legitimate interests in delivering effective search work</dd>
+            <dt>Retention</dt><dd>Engagement records kept for the duration of the relationship plus 6 years for legal and tax purposes</dd>
+          </dl>
+
+          <dl class="doc-defs">
+            <dt>Activity</dt><dd>Administrative, accounting and legal compliance</dd>
+            <dt>Lawful basis</dt><dd>Legal obligation (HMRC, regulatory requirements); legitimate interests in running the business</dd>
+            <dt>Retention</dt><dd>As required by law &mdash; typically 6 years for tax records</dd>
+          </dl>
+
+          <p>We do not use personal data for automated decision-making or profiling that produces legal or similarly significant effects. Behavioural assessment results presented to clients via HireInsight are one input among several to inform a hiring decision; the decision to hire is always made by the client.</p>
+        </section>
+
+        <section id="sharing">
+          <h2><span class="num">05</span> Who we share it with</h2>
+          <p>We share personal data only where necessary, and only with parties who are themselves bound by appropriate confidentiality and data protection obligations. The categories of recipients are:</p>
+          <ul>
+            <li><strong>Clients</strong> &mdash; for whom we share candidate shortlist information through HireInsight, on the basis that this is the purpose for which the candidate provided it.</li>
+            <li><strong>Service providers</strong> &mdash; including our website host (Netlify), email and productivity tools (Google Workspace), the HireInsight platform, and our accounting and payment providers.</li>
+            <li><strong>Professional advisors</strong> &mdash; legal, tax or audit advisors where engagement is necessary.</li>
+            <li><strong>Regulators and law enforcement</strong> &mdash; where we&rsquo;re required by law to disclose information.</li>
+          </ul>
+          <p>We do not sell personal data, and we do not share it for third-party marketing purposes.</p>
+        </section>
+
+        <section id="international">
+          <h2><span class="num">06</span> International transfers</h2>
+          <p>We work globally and may transfer personal data outside the UK in two contexts: when sharing candidate information with clients located overseas (typically in the US, EU, Middle East or Asia-Pacific), and when using service providers whose infrastructure may be hosted outside the UK.</p>
+          <p>Where a transfer is to a country that the UK government has not deemed to provide an adequate level of data protection, we rely on appropriate safeguards &mdash; typically the UK International Data Transfer Agreement, the UK Addendum to the EU Standard Contractual Clauses, or other valid transfer mechanism.</p>
+        </section>
+
+        <section id="retention">
+          <h2><span class="num">07</span> How long we keep it</h2>
+          <p>Specific retention periods are set out in Section 4 above. As a general principle:</p>
+          <ul>
+            <li>Website enquiry data is kept for up to 24 months from last contact.</li>
+            <li>Candidate records are kept while the individual remains active in our network. We review records periodically and remove those we no longer have a legitimate reason to keep.</li>
+            <li>Client engagement records are kept for the duration of the relationship plus six years.</li>
+            <li>Records required for legal or tax compliance are kept for the period required by the applicable law.</li>
+          </ul>
+          <p>You can request that we review and remove your data at any time &mdash; see Section 9.</p>
+        </section>
+
+        <section id="security">
+          <h2><span class="num">08</span> How we protect it</h2>
+          <p>We take reasonable and proportionate technical and organisational measures to protect personal data, including:</p>
+          <ul>
+            <li>Encrypted storage and transmission for sensitive data, including all candidate records held in HireInsight.</li>
+            <li>Access controls limiting who can see personal data within our business and supplier ecosystem.</li>
+            <li>Multi-factor authentication on accounts that handle personal data.</li>
+            <li>A small operational footprint &mdash; as a one-person consultancy, the number of people with access to personal data is deliberately limited.</li>
+          </ul>
+          <p>If a personal data breach occurs that is likely to result in a risk to your rights and freedoms, we&rsquo;ll notify the UK Information Commissioner&rsquo;s Office within 72 hours and, where required, the affected individuals.</p>
+        </section>
+
+        <section id="your-rights">
+          <h2><span class="num">09</span> Your rights</h2>
+          <p>Under UK data protection law you have a number of rights in relation to the personal data we hold about you. These include the right to:</p>
+          <ul>
+            <li><strong>Access</strong> &mdash; request a copy of the personal data we hold about you.</li>
+            <li><strong>Rectification</strong> &mdash; ask us to correct inaccurate or incomplete data.</li>
+            <li><strong>Erasure</strong> &mdash; ask us to delete your data, where we no longer have a lawful basis to hold it.</li>
+            <li><strong>Restriction</strong> &mdash; ask us to restrict processing in certain circumstances.</li>
+            <li><strong>Portability</strong> &mdash; request your data in a portable format, where applicable.</li>
+            <li><strong>Object</strong> &mdash; object to processing based on legitimate interests, including direct outreach.</li>
+            <li><strong>Withdraw consent</strong> &mdash; where we rely on consent as our lawful basis, you can withdraw it at any time.</li>
+          </ul>
+          <p>To exercise any of these rights, email us at <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a>. We&rsquo;ll respond within one calendar month. We may need to verify your identity before acting on a request.</p>
+          <p>If you&rsquo;re unhappy with how we&rsquo;ve handled your data, you have the right to lodge a complaint with the Information Commissioner&rsquo;s Office (ICO), the UK&rsquo;s data protection regulator. You can contact them at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a> or by calling 0303 123 1113. We&rsquo;d appreciate the chance to address any concerns directly first.</p>
+        </section>
+
+        <section id="cookies">
+          <h2><span class="num">10</span> Cookies and analytics</h2>
+          <p>This website does not set tracking cookies and does not use third-party analytics. We don&rsquo;t track you across the web, and we don&rsquo;t share usage data with advertising platforms.</p>
+          <p>The site loads typefaces from Google Fonts, which may log the IP address and basic technical metadata of visitors as part of its content delivery network operation. This is a standard request log handled by Google rather than a tracking activity, but we&rsquo;re flagging it for transparency.</p>
+          <p>If we add analytics or other tools in future that involve cookies or tracking, we&rsquo;ll update this notice and where required, present a consent banner before the tools are loaded.</p>
+        </section>
+
+        <section id="changes">
+          <h2><span class="num">11</span> Changes to this notice</h2>
+          <p>We may update this notice from time to time to reflect changes in our practices, technology, legal requirements or other factors. The version number and last-updated date at the top of this page show when it was most recently revised.</p>
+          <p>For material changes, we&rsquo;ll take reasonable steps to communicate the update &mdash; such as a note in the footer of the site, or a direct email to candidates and clients where appropriate.</p>
+        </section>
+
+        <section id="contact-dpo">
+          <h2><span class="num">12</span> How to contact us</h2>
+          <p>For any privacy-related question, request, or complaint, contact us at:</p>
+          <p style="margin-top: 8px;">
+            <strong>Penleigh International Limited</strong><br/>
+            32 Park Cross Street<br/>
+            Leeds, LS1 2QH<br/>
+            United Kingdom<br/>
+            Email: <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a><br/>
+            Phone: <a href="tel:+441133204980">+44 (0)113 320 4980</a>
+          </p>
+          <p>We are not currently required to appoint a Data Protection Officer under UK law. James Leigh handles privacy matters personally as Director.</p>
+        </section>
+
+        <div class="doc-end">
+          <p>Questions about anything in this notice?</p>
+          <a href="/contact">Get in touch <span>→</span></a>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="/retained-search">Retained Search</a></li>
+          <li><a href="/market-mapping">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/#markets">Markets</a></li>
+          <li><a href="/#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Highlight active TOC item as user scrolls
+  const sections = document.querySelectorAll('.doc-body section[id]');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const linkMap = {};
+  tocLinks.forEach(l => { linkMap[l.getAttribute('href').slice(1)] = l; });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        if (linkMap[e.target.id]) linkMap[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-100px 0px -60% 0px', threshold: 0 });
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>

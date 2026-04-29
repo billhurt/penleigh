@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Retained Executive Search · Penleigh International</title>
+<meta name="description" content="Retained executive search for midstream and subsea inspection. C-suite, senior management, sales and operations roles. 97% campaign success rate." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/retained-search">
+<meta property="og:title" content="Retained Executive Search · Penleigh International">
+<meta property="og:description" content="For roles you can’t afford to get wrong. Retained, exclusive, led by James Leigh — typically delivering shortlists in 3 to 5 weeks.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Retained Executive Search · Penleigh International">
+<meta name="twitter:description" content="For roles you can’t afford to get wrong. Retained, exclusive, led by James Leigh — typically delivering shortlists in 3 to 5 weeks.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .container--narrow { max-width: 920px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 200px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 70% 20%, rgba(212,130,58,0.1), transparent 50%),
+      radial-gradient(ellipse at 10% 100%, rgba(17,38,74,0.5), transparent 60%);
+    pointer-events: none;
+  }
+  .page-hero .container { position: relative; z-index: 2; }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(244,241,234,0.5);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--paper); }
+  .breadcrumb .sep { color: var(--amber-soft); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    max-width: 18ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--amber-soft); }
+  .page-hero .lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: rgba(244,241,234,0.72);
+    max-width: 60ch;
+  }
+
+  /* SECTION DEFAULTS */
+  section { padding: 120px 0; }
+  @media (max-width: 720px) { section { padding: 72px 0; } }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow .num {
+    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(32px, 4.2vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    max-width: 22ch;
+  }
+  .section-title em { font-style: italic; color: var(--navy); }
+
+  /* INTRO TEXT */
+  .lead-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    font-weight: 350;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    max-width: 32ch;
+  }
+  .lead-text em { color: var(--navy); font-style: italic; }
+  .body-text { color: var(--steel); font-size: 16.5px; line-height: 1.7; max-width: 62ch; }
+  .body-text p { margin-bottom: 18px; }
+  .body-text strong { color: var(--ink); font-weight: 500; }
+
+  /* WHY RETAINED — comparison table */
+  .compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(10,13,16,0.15);
+    border: 1px solid rgba(10,13,16,0.15);
+    margin-top: 40px;
+  }
+  @media (max-width: 720px) { .compare { grid-template-columns: 1fr; } }
+  .compare-col {
+    background: var(--paper);
+    padding: 40px 36px;
+  }
+  .compare-col.featured { background: var(--ink); color: var(--paper); }
+  .compare-col h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .compare-col .tag {
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--steel); margin-bottom: 24px; display: block;
+  }
+  .compare-col.featured .tag { color: var(--amber-soft); }
+  .compare-col ul { list-style: none; }
+  .compare-col li {
+    padding: 14px 0 14px 28px;
+    border-top: 1px solid rgba(10,13,16,0.1);
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--steel);
+    position: relative;
+  }
+  .compare-col li::before {
+    content: '−';
+    position: absolute; left: 0; top: 13px;
+    color: var(--steel);
+    font-weight: 600;
+  }
+  .compare-col.featured li {
+    border-color: rgba(244,241,234,0.12);
+    color: rgba(244,241,234,0.85);
+  }
+  .compare-col.featured li::before {
+    content: '✓';
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .compare-col li:first-child { border-top: none; }
+
+  /* PROCESS — vertical numbered list */
+  .vsteps { display: grid; gap: 0; }
+  .vstep {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 32px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(10,13,16,0.15);
+    align-items: start;
+  }
+  .vstep:last-child { border-bottom: 1px solid rgba(10,13,16,0.15); }
+  @media (max-width: 720px) {
+    .vstep { grid-template-columns: 1fr; gap: 8px; padding: 32px 0; }
+  }
+  .vstep-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--amber);
+    letter-spacing: -0.02em;
+  }
+  .vstep h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .vstep p {
+    color: var(--steel);
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 60ch;
+  }
+  .vstep .meta {
+    margin-top: 16px;
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  /* DELIVERABLE BOX */
+  .deliverable {
+    background: var(--paper-warm);
+    padding: 80px 0;
+    margin: 0;
+  }
+  .deliverable-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 960px) {
+    .deliverable-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .deliverable-mock {
+    background: var(--ink);
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 30px 60px rgba(10,13,16,0.15);
+    color: var(--paper);
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+  }
+  .deliverable-mock::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% -20%, rgba(212,130,58,0.2), transparent 50%);
+  }
+  .deliverable-mock-inner {
+    position: relative; z-index: 1;
+    height: 100%;
+    display: flex; flex-direction: column;
+  }
+  .deliverable-mock-header {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(244,241,234,0.5);
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .deliverable-mock-name {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+  .deliverable-mock-role {
+    font-size: 13px;
+    color: rgba(244,241,234,0.6);
+    margin-bottom: 28px;
+  }
+  .mock-bars { display: grid; gap: 10px; margin-top: auto; }
+  .mock-bar { display: flex; align-items: center; gap: 12px; }
+  .mock-bar-label { font-size: 11px; letter-spacing: 0.05em; color: rgba(244,241,234,0.6); width: 80px; }
+  .mock-bar-track { flex: 1; height: 4px; background: rgba(244,241,234,0.1); border-radius: 2px; overflow: hidden; }
+  .mock-bar-fill { height: 100%; background: var(--amber); border-radius: 2px; }
+  .mock-bar-val { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber-soft); width: 32px; text-align: right; }
+
+  /* FEES */
+  .fees { background: var(--navy-deep); color: var(--paper); }
+  .fees::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(ellipse at 90% 10%, rgba(212,130,58,0.15), transparent 50%);
+    pointer-events: none;
+  }
+  .fees { position: relative; overflow: hidden; }
+  .fees .container { position: relative; z-index: 2; }
+  .fees .section-eyebrow { color: rgba(244,241,234,0.55); }
+  .fees .section-eyebrow .num { color: var(--amber-soft); }
+  .fees .section-title { color: var(--paper); }
+  .fees .section-title em { color: var(--amber-soft); }
+  .fees-intro { color: rgba(244,241,234,0.65); max-width: 56ch; margin-bottom: 64px; font-size: 16.5px; line-height: 1.65; }
+  .fee-stages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(244,241,234,0.12);
+    border: 1px solid rgba(244,241,234,0.12);
+  }
+  @media (max-width: 720px) { .fee-stages { grid-template-columns: 1fr; } }
+  .fee-stage { background: var(--navy-deep); padding: 40px 32px; }
+  .fee-stage-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--amber-soft);
+    margin-bottom: 12px;
+  }
+  .fee-stage-pct {
+    font-family: var(--serif);
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 14px;
+    letter-spacing: -0.03em;
+  }
+  .fee-stage-pct .sym { font-size: 24px; color: var(--amber-soft); font-style: italic; }
+  .fee-stage h5 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .fee-stage p {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: rgba(244,241,234,0.6);
+  }
+  .fee-note {
+    margin-top: 40px;
+    font-size: 13.5px;
+    color: rgba(244,241,234,0.55);
+    max-width: 60ch;
+    line-height: 1.6;
+  }
+
+  /* CTA */
+  .cta { background: var(--paper); padding: 100px 0; }
+  .cta-card {
+    background: var(--navy);
+    color: var(--paper);
+    padding: 80px 64px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,130,58,0.3), transparent 60%);
+    pointer-events: none;
+  }
+  @media (max-width: 960px) {
+    .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; }
+  }
+  .cta-card h2 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-card h2 em { color: var(--amber-soft); font-style: italic; }
+  .cta-card-right {
+    display: flex; flex-direction: column; gap: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-card-right .meta {
+    color: rgba(244,241,234,0.7);
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+  .cta-card-right .meta a:hover { color: var(--amber-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--amber); color: var(--ink); }
+  .btn-primary:hover { background: var(--amber-soft); transform: translateY(-1px); }
+  .btn .arrow { display: inline-block; transition: transform 0.2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="index.html" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="retained-search.html" class="active">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="contact.html" class="nav-cta">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span>Services</span>
+      <span class="sep">/</span>
+      <span style="color: var(--paper);">Retained Search</span>
+    </div>
+    <h1>Retained executive search for roles you <em>can&rsquo;t afford to get wrong.</em></h1>
+    <p class="lede">A focused, exclusive search led directly by James Leigh — no junior handover, no contingent racing, no incentive to push the wrong candidate. Just the right person, sourced and qualified, typically in 3 to 5 weeks.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding: 100px 0;">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">01</span> The proposition</div>
+    <p class="lead-text">Most senior hires don&rsquo;t come from job boards. They come from <em>relationships</em>, deep market knowledge, and a process designed to surface fit — not just availability.</p>
+    <div class="body-text">
+      <p>We work retained, and we work exclusively. That structure exists for a reason: it&rsquo;s the only way to guarantee the time, focus and methodology a senior search actually needs. Contingent recruitment optimises for speed-to-CV. We optimise for the right hire, the first time.</p>
+      <p>For midstream and subsea inspection roles — where the talent pool is small, deeply networked, and rarely active on the market — that distinction is the entire game. <strong>97% of our retained campaigns over the last three years have closed successfully. 77% of placed candidates are still in role four years on.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section style="padding-top: 0;">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">02</span> Why retained</div>
+    <h2 class="section-title">A different <em>commercial structure</em>, a different result.</h2>
+    <div class="body-text">
+      <p>The fee model isn&rsquo;t a detail — it shapes every incentive in the search. Here&rsquo;s how the two approaches compare.</p>
+    </div>
+    <div class="compare">
+      <div class="compare-col">
+        <span class="tag">Contingent recruitment</span>
+        <h4>Pay on placement</h4>
+        <ul>
+          <li>The same role goes to multiple agencies, all racing each other</li>
+          <li>Recruiters incentivised to send CVs fast, not assess them properly</li>
+          <li>No exclusivity means no real headhunting — only candidates already &ldquo;on the market&rdquo;</li>
+          <li>If it doesn&rsquo;t fill, the recruiter walks away. So do their candidates.</li>
+        </ul>
+      </div>
+      <div class="compare-col featured">
+        <span class="tag">Retained search</span>
+        <h4>Pay in stages, exclusive partnership</h4>
+        <ul>
+          <li>One firm, one focus. Genuine commitment of time and methodology to your role</li>
+          <li>Properly headhunted candidates — including people not actively looking</li>
+          <li>Behavioural assessment via HireInsight built into every shortlist</li>
+          <li>97% success rate. If we don&rsquo;t fill it within first 8 weeks, we replace within Fee value.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section style="background: var(--paper-warm);">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">03</span> The method</div>
+    <h2 class="section-title">A five-step process, <em>built around fit.</em></h2>
+    <div class="vsteps">
+      <div class="vstep">
+        <div class="vstep-num">i.</div>
+        <div>
+          <h4>Understand</h4>
+          <p>A proper briefing call — not a job spec read-back. We dig into culture, success criteria, the politics of the role, and what &ldquo;great&rdquo; actually looks like in your business. We&rsquo;ll often push back on the brief if it doesn&rsquo;t match the market.</p>
+          <div class="meta">Week 1</div>
+        </div>
+      </div>
+      <div class="vstep">
+        <div class="vstep-num">ii.</div>
+        <div>
+          <h4>Source</h4>
+          <p>We headhunt. Our network of 6,000+ midstream and subsea contacts is the starting point, supplemented by mapped research into the right competitors, regions and adjacent industries. Every approach is direct, named, and pitched on the role&rsquo;s merits.</p>
+          <div class="meta">Weeks 1–3</div>
+        </div>
+      </div>
+      <div class="vstep">
+        <div class="vstep-num">iii.</div>
+        <div>
+          <h4>Assess via HireInsight</h4>
+          <p>Every shortlisted candidate is presented through HireInsight, our candidate delivery platform. You see a video introduction, psychometric profile, competency results, salary expectations, references and CV — all in one secure place, available to your team 24/7. <a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px;">See HireInsight →</a></p>
+          <div class="meta">Weeks 3–5</div>
+        </div>
+      </div>
+      <div class="vstep">
+        <div class="vstep-num">iv.</div>
+        <div>
+          <h4>Select</h4>
+          <p>A shortlist of typically 3–5 candidates. We support a two-stage interview process — managing logistics, gathering structured feedback at each stage, and being honest with you about which candidates are genuinely worth a second look.</p>
+          <div class="meta">Weeks 5–8</div>
+        </div>
+      </div>
+      <div class="vstep">
+        <div class="vstep-num">v.</div>
+        <div>
+          <h4>Deliver</h4>
+          <p>Offer management is where most placements break — counter-offers, notice periods, the awkward conversations with the current employer. We manage all of it, plus onboarding support and post-placement check-ins for the first six months.</p>
+          <div class="meta">Week 8 onwards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLE -->
+<section class="deliverable">
+  <div class="container">
+    <div class="deliverable-grid">
+      <div>
+        <div class="section-eyebrow"><span class="num">04</span> The deliverable</div>
+        <h2 class="section-title">Every candidate, the <em>full picture.</em></h2>
+        <div class="body-text">
+          <p>The shortlist arrives via HireInsight — a secure web platform that gives you and your hiring team everything you need on each candidate, available 24/7.</p>
+          <p>That includes an executive summary, a recorded video introduction from the candidate, psychometric profile (DISC + behavioural), competency questionnaire results, salary expectations, references and CV.</p>
+          <p>It&rsquo;s the kind of dossier most search firms only assemble for board-level roles. We deliver it as standard.</p>
+        </div>
+        <a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 20px;">Explore HireInsight <span class="arrow">→</span></a>
+      </div>
+      <div class="deliverable-mock">
+        <div class="deliverable-mock-inner">
+          <div class="deliverable-mock-header">
+            <span>HireInsight</span>
+            <span>Candidate 03 / 04</span>
+          </div>
+          <div class="deliverable-mock-name">Senior Operations Director</div>
+          <div class="deliverable-mock-role">Pipeline Inspection · 18 yrs experience · Available Q3</div>
+          <div class="mock-bars">
+            <div class="mock-bar">
+              <span class="mock-bar-label">Leadership</span>
+              <span class="mock-bar-track"><span class="mock-bar-fill" style="width: 88%;"></span></span>
+              <span class="mock-bar-val">88</span>
+            </div>
+            <div class="mock-bar">
+              <span class="mock-bar-label">Technical</span>
+              <span class="mock-bar-track"><span class="mock-bar-fill" style="width: 94%;"></span></span>
+              <span class="mock-bar-val">94</span>
+            </div>
+            <div class="mock-bar">
+              <span class="mock-bar-label">Cultural fit</span>
+              <span class="mock-bar-track"><span class="mock-bar-fill" style="width: 81%;"></span></span>
+              <span class="mock-bar-val">81</span>
+            </div>
+            <div class="mock-bar">
+              <span class="mock-bar-label">Commercial</span>
+              <span class="mock-bar-track"><span class="mock-bar-fill" style="width: 76%;"></span></span>
+              <span class="mock-bar-val">76</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEES -->
+<section class="fees">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">05</span> Fee structure</div>
+    <h2 class="section-title">Three stages. <em>Skin in the game on both sides.</em></h2>
+    <p class="fees-intro">Our retained fee is calculated as a percentage of the candidate&rsquo;s Total Annual Remuneration and paid in three stages, in line with industry standard for retained executive search.</p>
+    <div class="fee-stages">
+      <div class="fee-stage">
+        <div class="fee-stage-num">i.</div>
+        <div class="fee-stage-pct">⅓<span class="sym"></span></div>
+        <h5>On engagement</h5>
+        <p>Paid when you instruct us to act. Triggers the start of the search and our exclusivity.</p>
+      </div>
+      <div class="fee-stage">
+        <div class="fee-stage-num">ii.</div>
+        <div class="fee-stage-pct">⅓<span class="sym"></span></div>
+        <h5>On shortlist</h5>
+        <p>Paid when we deliver your shortlist of qualified, assessed candidates via HireInsight.</p>
+      </div>
+      <div class="fee-stage">
+        <div class="fee-stage-num">iii.</div>
+        <div class="fee-stage-pct">⅓<span class="sym"></span></div>
+        <h5>On placement</h5>
+        <p>The balance, payable when the candidate accepts your offer and starts.</p>
+      </div>
+    </div>
+    <p class="fee-note">Fee percentage scales with seniority of the role: 28% of TAR up to £75,000, 30% to £150,000, and 35% above. If the placement leaves within the first 8 weeks for any reason within our control, we&rsquo;ll source a replacement to the value of the fee. Full terms available on request.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <h2>Got a role you need to fill <em>properly?</em></h2>
+      </div>
+      <div class="cta-card-right">
+        <a href="mailto:enquiries@penleighinternational.com" class="btn btn-primary" style="align-self: flex-start;">Start a conversation <span class="arrow">→</span></a>
+        <div class="meta">
+          <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a><br/>
+          <a href="tel:+441133204980">+44 (0)113 320 4980</a><br/>
+          <a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="retained-search.html">Retained Search</a></li>
+          <li><a href="market-mapping.html">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#markets">Markets</a></li>
+          <li><a href="index.html#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section > .container > *, .vstep, .compare-col, .fee-stage').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>

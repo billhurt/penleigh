@@ -1,0 +1,82 @@
+# Netlify configuration for Penleigh International
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+
+# Pretty URLs — let visitors hit /about instead of /about.html
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/retained-search"
+  to = "/retained-search.html"
+  status = 200
+
+[[redirects]]
+  from = "/market-mapping"
+  to = "/market-mapping.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+# Trailing slash variants
+[[redirects]]
+  from = "/about/"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact/"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/retained-search/"
+  to = "/retained-search.html"
+  status = 200
+
+[[redirects]]
+  from = "/market-mapping/"
+  to = "/market-mapping.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy/"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms/"
+  to = "/terms.html"
+  status = 200
+
+# Security headers (sensible defaults for a brochure site)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Aggressive caching for static assets (favicon, OG image, fonts won't change often)
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

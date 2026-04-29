@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact · Penleigh International</title>
+<meta name="description" content="Contact Penleigh International about a retained search, market mapping engagement, or general enquiry. Direct line to James Leigh, Founder & Director." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/contact">
+<meta property="og:title" content="Contact · Penleigh International">
+<meta property="og:description" content="Have a proper conversation. Drop a note or pick up the phone — James responds personally, usually within a working day.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact · Penleigh International">
+<meta name="twitter:description" content="Have a proper conversation. Drop a note or pick up the phone — James responds personally, usually within a working day.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .container--narrow { max-width: 920px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* PAGE HERO */
+  .page-hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 200px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 70% 20%, rgba(212,130,58,0.1), transparent 50%),
+      radial-gradient(ellipse at 10% 100%, rgba(17,38,74,0.5), transparent 60%);
+    pointer-events: none;
+  }
+  .page-hero .container { position: relative; z-index: 2; }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(244,241,234,0.5);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--paper); }
+  .breadcrumb .sep { color: var(--amber-soft); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    max-width: 18ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--amber-soft); }
+  .page-hero .lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: rgba(244,241,234,0.72);
+    max-width: 60ch;
+  }
+
+  section { padding: 120px 0; }
+  @media (max-width: 720px) { section { padding: 72px 0; } }
+
+  /* CONTACT GRID */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 64px; }
+  }
+
+  /* FORM */
+  .form-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .form-eyebrow .num {
+    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+  }
+  .form-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .form-title em { font-style: italic; color: var(--navy); }
+  .form-intro {
+    color: var(--steel);
+    font-size: 16.5px;
+    line-height: 1.65;
+    max-width: 50ch;
+    margin-bottom: 48px;
+  }
+
+  form { display: grid; gap: 24px; }
+  .field { display: grid; gap: 8px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 540px) { .field-row { grid-template-columns: 1fr; } }
+  .field label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    font-weight: 500;
+  }
+  .field label .req { color: var(--amber); }
+  .field input,
+  .field select,
+  .field textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(10,13,16,0.25);
+    padding: 12px 0 14px;
+    font-size: 16px;
+    font-family: var(--sans);
+    color: var(--ink);
+    transition: border-color 0.2s;
+    width: 100%;
+    border-radius: 0;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--ink);
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: var(--sans);
+    line-height: 1.5;
+  }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='%230a0d10' stroke-width='1.5' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 28px;
+    cursor: pointer;
+  }
+
+  .form-meta {
+    font-size: 13px;
+    color: var(--steel);
+    line-height: 1.55;
+    max-width: 56ch;
+  }
+  .form-meta a { border-bottom: 1px solid var(--steel); padding-bottom: 1px; }
+
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 32px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: var(--sans);
+    justify-self: start;
+    margin-top: 16px;
+  }
+  .btn-submit:hover { background: var(--navy); transform: translateY(-1px); }
+  .btn-submit .arrow { transition: transform 0.2s; }
+  .btn-submit:hover .arrow { transform: translateX(3px); }
+
+  /* DIRECT DETAILS panel */
+  .direct {
+    background: var(--paper-warm);
+    padding: 48px 40px;
+    border-radius: 4px;
+    position: sticky;
+    top: 100px;
+  }
+  .direct-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 32px;
+  }
+  .direct-photo-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(10,13,16,0.15);
+    margin-bottom: 28px;
+  }
+  .direct-photo {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+  .direct-photo-text strong { display: block; font-weight: 500; font-size: 16px; margin-bottom: 4px; }
+  .direct-photo-text span { font-size: 13.5px; color: var(--steel); }
+  .direct-row {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(10,13,16,0.1);
+  }
+  .direct-row:last-child { border-bottom: none; }
+  .direct-row .label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .direct-row .val {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .direct-row .val a { transition: color 0.2s; }
+  .direct-row .val a:hover { color: var(--navy); }
+
+  /* FAQ */
+  .faq { background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+  .faq::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(ellipse at 80% 10%, rgba(212,130,58,0.1), transparent 50%);
+    pointer-events: none;
+  }
+  .faq .container { position: relative; z-index: 2; }
+  .faq-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(244,241,234,0.55);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .faq-eyebrow .num { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber-soft); }
+  .faq-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(30px, 3.6vw, 48px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 64px;
+    max-width: 22ch;
+  }
+  .faq-title em { font-style: italic; color: var(--amber-soft); }
+
+  .faq-list { display: grid; gap: 0; }
+  .faq-item {
+    border-top: 1px solid rgba(244,241,234,0.15);
+    padding: 32px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+  }
+  .faq-item:last-child { border-bottom: 1px solid rgba(244,241,234,0.15); }
+  @media (max-width: 720px) {
+    .faq-item { grid-template-columns: 1fr; gap: 12px; }
+  }
+  .faq-item h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .faq-item p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: rgba(244,241,234,0.7);
+    max-width: 60ch;
+  }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="index.html" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="retained-search.html">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="contact.html" class="nav-cta active">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--paper);">Contact</span>
+    </div>
+    <h1>Let&rsquo;s have a <em>proper conversation.</em></h1>
+    <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. James responds personally, usually within a working day.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM + DETAILS -->
+<section style="padding-top: 100px;">
+  <div class="container">
+    <div class="contact-grid">
+      <div>
+        <div class="form-eyebrow"><span class="num">01</span> Send a message</div>
+        <h2 class="form-title">Tell us a little about <em>what you need.</em></h2>
+        <p class="form-intro">A few short fields to help James understand the shape of your enquiry before he comes back to you. Nothing here commits you to anything — initial conversations are always confidential and never charged for.</p>
+
+        <form id="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              netlify>
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>Don&rsquo;t fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="company">Company <span class="req">*</span></label>
+              <input type="text" id="company" name="company" required autocomplete="organization" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="enquiry">What can we help with? <span class="req">*</span></label>
+              <select id="enquiry" name="enquiry" required>
+                <option value="">Please choose…</option>
+                <option value="retained-search">Retained executive search</option>
+                <option value="market-mapping">Market mapping</option>
+                <option value="general">General enquiry</option>
+                <option value="press">Press &amp; media</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="market">Market</label>
+              <select id="market" name="market">
+                <option value="">Not sure / other</option>
+                <option value="pipeline-services">Pipeline Services</option>
+                <option value="subsea-inspection">Subsea Inspection</option>
+                <option value="pipeline-construction">Pipeline Construction</option>
+                <option value="ndt">NDT Services</option>
+                <option value="robotics">Robotics &amp; Inspection Tech</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="message">A bit of context <span class="req">*</span></label>
+            <textarea id="message" name="message" rows="5" required placeholder="Role, region, timeline — or just an opening question. Whatever&rsquo;s easiest."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send message <span class="arrow">→</span></button>
+
+          <p class="form-meta">By submitting this form you&rsquo;re happy for us to contact you about your enquiry. We don&rsquo;t share details with third parties and don&rsquo;t use the form for marketing. See our <a href="/privacy">privacy notice</a>.</p>
+        </form>
+      </div>
+
+      <aside class="direct">
+        <div class="direct-eyebrow">Or contact directly</div>
+        <div class="direct-photo-row">
+          <div class="direct-photo" style="background-image: url('/assets/james-256.webp');"></div>
+          <div class="direct-photo-text">
+            <strong>James Leigh</strong>
+            <span>Founder &amp; Director</span>
+          </div>
+        </div>
+        <div class="direct-row">
+          <div class="label">Email</div>
+          <div class="val"><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></div>
+        </div>
+        <div class="direct-row">
+          <div class="label">Office</div>
+          <div class="val"><a href="tel:+441133204980">+44 (0)113 320 4980</a></div>
+        </div>
+        <div class="direct-row">
+          <div class="label">Address</div>
+          <div class="val">32 Park Cross Street<br/>Leeds, LS1 2QH<br/>United Kingdom</div>
+        </div>
+        <div class="direct-row">
+          <div class="label">LinkedIn</div>
+          <div class="val"><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">@penleighinternational</a></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container container--narrow">
+    <div class="faq-eyebrow"><span class="num">02</span> Before you write</div>
+    <h2 class="faq-title">A few <em>common questions.</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>How quickly will I hear back?</h4>
+        <p>James responds personally to every enquiry, usually within a working day. If you&rsquo;ve flagged something time-sensitive in your message, sooner.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Do I need to commit to anything to start a conversation?</h4>
+        <p>No. Initial scoping calls are always confidential and never charged for. We only formalise the engagement once we&rsquo;ve both decided it&rsquo;s the right fit.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Can you help if I&rsquo;m not sure whether I need a search yet?</h4>
+        <p>Yes — that&rsquo;s often where the most useful conversations begin. We can talk through the role, the market, and whether a full retained search, a market map, or simply a few introductions would serve you best.</p>
+      </div>
+      <div class="faq-item">
+        <h4>What if my role isn&rsquo;t in midstream or subsea?</h4>
+        <p>We&rsquo;re honest about scope. If your role sits outside our markets we&rsquo;ll say so directly, and where we can we&rsquo;ll point you toward a specialist who&rsquo;ll do better by you than we would.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is everything we discuss confidential?</h4>
+        <p>Always. We treat every enquiry — including ones that don&rsquo;t turn into engagements — as commercially sensitive. NDAs are standard for mapping work and available on request for searches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="retained-search.html">Retained Search</a></li>
+          <li><a href="market-mapping.html">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#markets">Markets</a></li>
+          <li><a href="index.html#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section > .container > *, .faq-item').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+
+  // Form: AJAX submission to Netlify Forms (keeps user on the page)
+  // Netlify intercepts POSTs to its own pages when the form has data-netlify="true"
+  // and form-name field is set. We URL-encode the FormData and POST to "/".
+  document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.btn-submit');
+    const originalHTML = btn.innerHTML;
+
+    // Honeypot: if filled, silently drop
+    if (form.querySelector('[name="bot-field"]').value) return;
+
+    // Disable button during submission
+    btn.disabled = true;
+    btn.innerHTML = 'Sending&hellip;';
+    btn.style.opacity = '0.6';
+
+    const formData = new FormData(form);
+    const body = new URLSearchParams(formData).toString();
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
+      });
+      if (!response.ok) throw new Error('Submission failed');
+      // Success state
+      btn.innerHTML = 'Sent — thanks. We&rsquo;ll be in touch.';
+      btn.style.background = 'var(--amber)';
+      btn.style.color = 'var(--ink)';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 5000);
+    } catch (err) {
+      btn.innerHTML = 'Something went wrong. Try email instead.';
+      btn.style.background = '#a83232';
+      btn.style.color = 'var(--paper)';
+      btn.style.opacity = '1';
+      setTimeout(() => {
+        btn.innerHTML = originalHTML;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 5000);
+    }
+  });
+</script>
+
+</body>
+</html>

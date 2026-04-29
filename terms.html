@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Use · Penleigh International</title>
+<meta name="description" content="The terms governing your use of the Penleigh International website. Note: separate commercial terms apply to retained search and market mapping engagements." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/terms">
+<meta property="og:title" content="Terms of Use · Penleigh International">
+<meta property="og:description" content="The terms governing your use of the Penleigh International website.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Terms of Use · Penleigh International">
+<meta name="twitter:description" content="The terms governing your use of the Penleigh International website.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  .page-hero {
+    background: var(--paper-warm);
+    color: var(--ink);
+    padding: 160px 0 60px;
+    border-bottom: 1px solid rgba(10,13,16,0.08);
+  }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 28px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { color: var(--amber); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(36px, 4.5vw, 60px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin-bottom: 20px;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--navy); }
+  .page-hero .meta {
+    font-size: 14px;
+    color: var(--steel);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .page-hero .meta span { display: inline-flex; align-items: center; gap: 8px; }
+  .page-hero .meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
+
+  .doc { padding: 80px 0 120px; }
+  .doc-grid {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .doc-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  .toc {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+  }
+  @media (max-width: 960px) {
+    .toc { position: static; padding: 24px; background: var(--paper-warm); border-radius: 4px; }
+  }
+  .toc h6 {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .toc h6 .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--amber);
+  }
+  .toc ol { list-style: none; counter-reset: section; }
+  .toc li {
+    counter-increment: section;
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .toc a {
+    display: flex;
+    gap: 12px;
+    padding: 6px 0;
+    font-size: 13.5px;
+    color: var(--steel);
+    transition: color 0.2s;
+    align-items: baseline;
+  }
+  .toc a::before {
+    content: counter(section, decimal-leading-zero);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 12px;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .toc a:hover, .toc a.active { color: var(--ink); }
+
+  .doc-body { max-width: 68ch; }
+  .doc-body section { padding: 0; margin-bottom: 56px; scroll-margin-top: 100px; }
+  .doc-body h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(10,13,16,0.15);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .doc-body h2 .num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--amber);
+  }
+  .doc-body h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 28px;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+  .doc-body p {
+    color: #2a3038;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .doc-body p strong { color: var(--ink); font-weight: 500; }
+  .doc-body ul {
+    list-style: none;
+    margin: 16px 0 24px;
+  }
+  .doc-body ul li {
+    color: #2a3038;
+    font-size: 16px;
+    line-height: 1.65;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .doc-body ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 12px;
+    width: 12px; height: 1px;
+    background: var(--amber);
+  }
+  .doc-body a {
+    color: var(--navy);
+    border-bottom: 1px solid rgba(17,38,74,0.4);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+  }
+  .doc-body a:hover { border-color: var(--navy); }
+
+  .doc-aside {
+    background: var(--paper-warm);
+    border-left: 2px solid var(--amber);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .doc-aside p { font-size: 14.5px; line-height: 1.65; color: var(--steel); margin-bottom: 0; }
+  .doc-aside p strong { color: var(--ink); }
+
+  .doc-end {
+    margin-top: 72px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(10,13,16,0.15);
+  }
+  .doc-end p { color: var(--steel); margin-bottom: 8px; }
+  .doc-end a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-weight: 500;
+    color: var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="/" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="/about">About</a>
+      <a href="/retained-search">Services</a>
+      <a href="/#process">Process</a>
+      <a href="/#markets">Markets</a>
+      <a href="/contact" class="nav-cta">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--ink);">Terms of Use</span>
+    </div>
+    <h1>Terms of <em>Use</em></h1>
+    <div class="meta">
+      <span><span class="dot"></span>Last updated: 29 April 2026</span>
+      <span><span class="dot"></span>Version 1.0</span>
+    </div>
+  </div>
+</section>
+
+<section class="doc">
+  <div class="container">
+    <div class="doc-grid">
+
+      <aside class="toc">
+        <h6><span class="num">§</span> Contents</h6>
+        <ol>
+          <li><a href="#scope">What these terms cover</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#use">Using the website</a></li>
+          <li><a href="#ip">Intellectual property</a></li>
+          <li><a href="#information">Information on this site</a></li>
+          <li><a href="#external-links">External links</a></li>
+          <li><a href="#liability">Limitation of liability</a></li>
+          <li><a href="#availability">Availability and changes</a></li>
+          <li><a href="#governing-law">Governing law</a></li>
+          <li><a href="#contact">How to contact us</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-body">
+
+        <p style="font-size: 17px; line-height: 1.65; color: var(--steel); margin-bottom: 32px;">These terms govern your use of the Penleigh International website at <strong>penleighinternational.com</strong>. By using the site you agree to them. If you don&rsquo;t, please stop using the site.</p>
+
+        <div class="doc-aside">
+          <p><strong>These terms cover the website only.</strong> Separate commercial terms apply to retained search engagements and market mapping projects. Those are issued in writing at the start of an engagement and supersede anything on this page in relation to the work itself. If you&rsquo;d like a copy of our standard engagement terms, please <a href="/contact" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px;">get in touch</a>.</p>
+        </div>
+
+        <section id="scope">
+          <h2><span class="num">01</span> What these terms cover</h2>
+          <p>These Terms of Use are a legal agreement between you (the visitor) and Penleigh International Limited (&ldquo;Penleigh&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) governing your use of penleighinternational.com (the &ldquo;Site&rdquo;).</p>
+          <p>They cover what you can do on the Site, who owns the content, and the limits of our responsibility for the information we publish.</p>
+          <p>They do <em>not</em> cover the contractual relationship between Penleigh and a client engaging us for retained search or market mapping &mdash; that&rsquo;s governed by a separate engagement contract issued at the time of instruction.</p>
+        </section>
+
+        <section id="about-us">
+          <h2><span class="num">02</span> About us</h2>
+          <p>The Site is operated by Penleigh International Limited, a company registered in England and Wales (company number 12442642). Our registered office is 32 Park Cross Street, Leeds, LS1 2QH, United Kingdom.</p>
+          <p>You can contact us at <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a> or +44 (0)113 320 4980.</p>
+        </section>
+
+        <section id="use">
+          <h2><span class="num">03</span> Using the website</h2>
+          <p>You may access and use the Site for personal and lawful business purposes &mdash; reading our content, sending us a message via the contact form, or following us on linked social channels.</p>
+          <p>You must not:</p>
+          <ul>
+            <li>Use the Site in a way that breaches any applicable law or regulation.</li>
+            <li>Attempt to gain unauthorised access to the Site, the server it runs on, or any connected database or system.</li>
+            <li>Introduce viruses, malware, or any other malicious code or material.</li>
+            <li>Use any automated system &mdash; including bots, scrapers or crawlers &mdash; to access, copy or harvest content from the Site, except for legitimate search engine indexing.</li>
+            <li>Send unsolicited commercial communications through the contact form, or use the form to attempt to harm, defraud, or harass us or others.</li>
+            <li>Frame, mirror, or otherwise present the Site or its content as your own.</li>
+          </ul>
+          <p>We reserve the right to block access from any IP address or actor we reasonably believe is in breach of these terms.</p>
+        </section>
+
+        <section id="ip">
+          <h2><span class="num">04</span> Intellectual property</h2>
+          <p>All content on the Site &mdash; including text, images, logos, design, code, and the Penleigh International name and brand &mdash; is owned by us or used under licence. It is protected by UK and international copyright, trade mark and other intellectual property laws.</p>
+          <p>You may:</p>
+          <ul>
+            <li>View pages on the Site for personal or business reference.</li>
+            <li>Save or print individual pages for your own non-commercial use.</li>
+            <li>Quote short excerpts with appropriate attribution and a link back to the source page.</li>
+          </ul>
+          <p>You may not, without our prior written permission:</p>
+          <ul>
+            <li>Reproduce, republish, or redistribute substantial portions of the Site&rsquo;s content.</li>
+            <li>Use any content for commercial purposes, including resale or training of machine learning models.</li>
+            <li>Use the Penleigh International name, logo, or any of our brand assets in a way that suggests endorsement of, or affiliation with, your business or content.</li>
+          </ul>
+          <p>The HireInsight platform referenced on the Site is operated by a third-party provider; trademarks and content within HireInsight are owned by that provider and used by us under licence.</p>
+        </section>
+
+        <section id="information">
+          <h2><span class="num">05</span> Information on this site</h2>
+          <p>The Site is provided for general information about Penleigh International and our services. We work hard to keep it accurate and up to date, but we don&rsquo;t guarantee that everything on it is current, complete, or error-free at all times.</p>
+          <p>Any market data, statistics, or claims about our methodology represent our experience and good-faith view at the time of writing. They are not warranties or guarantees of any specific outcome on a future engagement.</p>
+          <p>Nothing on the Site constitutes legal, financial, recruitment, or other professional advice. If you&rsquo;re making a hiring or business decision, you should rely on advice tailored to your specific situation &mdash; including, where relevant, an engagement with us under a written contract.</p>
+        </section>
+
+        <section id="external-links">
+          <h2><span class="num">06</span> External links</h2>
+          <p>The Site contains links to external websites &mdash; including LinkedIn, the HireInsight platform, and the UK Information Commissioner&rsquo;s Office. These links are provided for convenience.</p>
+          <p>We don&rsquo;t control the content, policies, or practices of any external site, and we&rsquo;re not responsible for them. Following a link is at your own discretion and risk.</p>
+        </section>
+
+        <section id="liability">
+          <h2><span class="num">07</span> Limitation of liability</h2>
+          <p>The Site is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. To the fullest extent permitted by law, we exclude all warranties, conditions and representations &mdash; whether express or implied &mdash; in relation to the Site and its content.</p>
+          <p>To the fullest extent permitted by law, we will not be liable for any:</p>
+          <ul>
+            <li>Loss of profits, revenue, business or goodwill;</li>
+            <li>Loss or corruption of data;</li>
+            <li>Indirect, special or consequential loss;</li>
+          </ul>
+          <p>arising out of or in connection with your use of the Site or any decision made in reliance on its content.</p>
+          <p>Nothing in these terms excludes or limits our liability for death or personal injury caused by our negligence, for fraud or fraudulent misrepresentation, or for any other liability that cannot lawfully be excluded.</p>
+          <p>For the avoidance of doubt: this section governs liability arising from your use of the Site only. Where Penleigh has entered into an engagement contract with you, the liability terms of that contract apply to the engagement.</p>
+        </section>
+
+        <section id="availability">
+          <h2><span class="num">08</span> Availability and changes</h2>
+          <p>We aim to keep the Site available, but we don&rsquo;t guarantee uninterrupted access. The Site may be unavailable for maintenance, updates, or for reasons outside our control.</p>
+          <p>We may change, update, or remove content from the Site at any time without notice. We may also revise these terms; the most current version will always be posted here, with the &ldquo;last updated&rdquo; date at the top reflecting the date of the most recent revision. Continuing to use the Site after a change constitutes acceptance of the revised terms.</p>
+        </section>
+
+        <section id="governing-law">
+          <h2><span class="num">09</span> Governing law</h2>
+          <p>These terms, and any dispute or claim arising from them or your use of the Site (including non-contractual disputes or claims), are governed by the law of England and Wales.</p>
+          <p>You and we agree that the courts of England and Wales have exclusive jurisdiction to settle any such dispute or claim.</p>
+        </section>
+
+        <section id="contact">
+          <h2><span class="num">10</span> How to contact us</h2>
+          <p>For any question about these terms, or to report a problem with the Site, contact us at:</p>
+          <p style="margin-top: 8px;">
+            <strong>Penleigh International Limited</strong><br/>
+            32 Park Cross Street<br/>
+            Leeds, LS1 2QH<br/>
+            United Kingdom<br/>
+            Email: <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a><br/>
+            Phone: <a href="tel:+441133204980">+44 (0)113 320 4980</a>
+          </p>
+        </section>
+
+        <div class="doc-end">
+          <p>For our commercial engagement terms, get in touch.</p>
+          <a href="/contact">Contact us <span>→</span></a>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="/retained-search">Retained Search</a></li>
+          <li><a href="/market-mapping">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/#markets">Markets</a></li>
+          <li><a href="/#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.doc-body section[id]');
+  const tocLinks = document.querySelectorAll('.toc a');
+  const linkMap = {};
+  tocLinks.forEach(l => { linkMap[l.getAttribute('href').slice(1)] = l; });
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        tocLinks.forEach(l => l.classList.remove('active'));
+        if (linkMap[e.target.id]) linkMap[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-100px 0px -60% 0px', threshold: 0 });
+  sections.forEach(s => obs.observe(s));
+</script>
+
+</body>
+</html>

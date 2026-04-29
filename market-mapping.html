@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Market Mapping · Penleigh International</title>
+<meta name="description" content="Confidential talent intelligence for the midstream and subsea industries. Used by founders, boards and PE investors for hires, restructures and acquisitions." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/market-mapping">
+<meta property="og:title" content="Market Mapping · Penleigh International">
+<meta property="og:description" content="Talent intelligence, before you need it. Confidential market mapping for founders, boards and PE investors planning a hire, restructure, or transaction.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Market Mapping · Penleigh International">
+<meta name="twitter:description" content="Talent intelligence, before you need it. Confidential market mapping for founders, boards and PE investors planning a hire, restructure, or transaction.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .container--narrow { max-width: 920px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* PAGE HERO — quieter than retained search */
+  .page-hero {
+    background: var(--paper-warm);
+    color: var(--ink);
+    padding: 200px 0 100px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(10,13,16,0.08);
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute; top: 0; right: -10%;
+    width: 60%; height: 100%;
+    background-image: radial-gradient(ellipse at center, rgba(17,38,74,0.08), transparent 60%);
+    pointer-events: none;
+  }
+  .page-hero .container { position: relative; z-index: 2; }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { color: var(--amber); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(44px, 6vw, 84px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    max-width: 18ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--navy); }
+  .page-hero .lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--steel);
+    max-width: 60ch;
+  }
+
+  section { padding: 120px 0; }
+  @media (max-width: 720px) { section { padding: 72px 0; } }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow .num {
+    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(32px, 4.2vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    max-width: 22ch;
+  }
+  .section-title em { font-style: italic; color: var(--navy); }
+
+  .lead-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    font-weight: 350;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    max-width: 32ch;
+  }
+  .lead-text em { color: var(--navy); font-style: italic; }
+  .body-text { color: var(--steel); font-size: 16.5px; line-height: 1.7; max-width: 62ch; }
+  .body-text p { margin-bottom: 18px; }
+  .body-text strong { color: var(--ink); font-weight: 500; }
+
+  /* USE CASES */
+  .usecases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(10,13,16,0.12);
+    border: 1px solid rgba(10,13,16,0.12);
+    margin-top: 32px;
+  }
+  @media (max-width: 720px) { .usecases { grid-template-columns: 1fr; } }
+  .usecase {
+    background: var(--paper);
+    padding: 48px 40px;
+    transition: background 0.2s;
+  }
+  .usecase:hover { background: var(--paper-warm); }
+  .usecase-tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .usecase h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .usecase p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--steel);
+    max-width: 42ch;
+  }
+
+  /* DELIVERABLES */
+  .deliv {
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .deliv::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 80% 20%, rgba(212,130,58,0.1), transparent 50%),
+      radial-gradient(ellipse at 10% 100%, rgba(17,38,74,0.5), transparent 60%);
+    pointer-events: none;
+  }
+  .deliv .container { position: relative; z-index: 2; }
+  .deliv .section-eyebrow { color: rgba(244,241,234,0.55); }
+  .deliv .section-eyebrow .num { color: var(--amber-soft); }
+  .deliv .section-title { color: var(--paper); }
+  .deliv .section-title em { color: var(--amber-soft); }
+  .deliv-intro { color: rgba(244,241,234,0.65); max-width: 56ch; margin-bottom: 64px; font-size: 17px; line-height: 1.6; }
+  .deliv-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 56px 80px;
+  }
+  @media (max-width: 720px) { .deliv-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .deliv-item { padding-left: 0; }
+  .deliv-item-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--amber-soft);
+    margin-bottom: 8px;
+  }
+  .deliv-item h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(244,241,234,0.15);
+  }
+  .deliv-item p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: rgba(244,241,234,0.65);
+  }
+
+  /* PROCESS / TIMELINE */
+  .process { background: var(--paper-warm); }
+  .process .lead-text em { color: var(--navy); }
+  .timeline {
+    margin-top: 48px;
+    position: relative;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 12px; bottom: 12px;
+    width: 1px;
+    background: rgba(10,13,16,0.2);
+  }
+  .timeline-item {
+    position: relative;
+    padding-left: 56px;
+    padding-bottom: 40px;
+  }
+  .timeline-item:last-child { padding-bottom: 0; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 8px;
+    width: 15px; height: 15px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 4px solid var(--paper-warm);
+    box-shadow: 0 0 0 1px rgba(10,13,16,0.2);
+  }
+  .timeline-tag {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 6px;
+  }
+  .timeline-item h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .timeline-item p {
+    color: var(--steel);
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 56ch;
+  }
+
+  /* CONFIDENTIALITY CALLOUT */
+  .conf {
+    background: var(--navy-deep);
+    color: var(--paper);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .conf::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(ellipse at 20% 80%, rgba(212,130,58,0.12), transparent 50%);
+    pointer-events: none;
+  }
+  .conf .container { position: relative; z-index: 2; }
+  .conf-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 720px) { .conf-grid { grid-template-columns: 1fr; gap: 32px; } }
+  .conf-mark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--amber-soft);
+    letter-spacing: 0.05em;
+  }
+  .conf h3 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(26px, 3vw, 38px);
+    line-height: 1.1;
+    margin-top: 16px;
+    letter-spacing: -0.02em;
+  }
+  .conf h3 em { font-style: italic; color: var(--amber-soft); }
+  .conf p {
+    color: rgba(244,241,234,0.7);
+    font-size: 16px;
+    line-height: 1.65;
+    max-width: 60ch;
+  }
+
+  /* CTA */
+  .cta { background: var(--paper); padding: 100px 0; }
+  .cta-card {
+    background: var(--navy);
+    color: var(--paper);
+    padding: 80px 64px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,130,58,0.3), transparent 60%);
+    pointer-events: none;
+  }
+  @media (max-width: 960px) {
+    .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; }
+  }
+  .cta-card h2 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-card h2 em { color: var(--amber-soft); font-style: italic; }
+  .cta-card-right {
+    display: flex; flex-direction: column; gap: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-card-right .meta { color: rgba(244,241,234,0.7); font-size: 14.5px; line-height: 1.7; }
+  .cta-card-right .meta a:hover { color: var(--amber-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--amber); color: var(--ink); }
+  .btn-primary:hover { background: var(--amber-soft); transform: translateY(-1px); }
+  .btn .arrow { display: inline-block; transition: transform 0.2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="index.html" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="market-mapping.html" class="active">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="contact.html" class="nav-cta">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span>Services</span>
+      <span class="sep">/</span>
+      <span style="color: var(--ink);">Market Mapping</span>
+    </div>
+    <h1>Talent intelligence, <em>before you need it.</em></h1>
+    <p class="lede">A confidential study of the people, the moves and the comp benchmarks shaping a defined market — commissioned before a hire, a restructure, or a transaction. The kind of intelligence that changes how you plan, not just how you recruit.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section style="padding: 100px 0;">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">01</span> What it is</div>
+    <p class="lead-text">A market map is a structured view of <em>who&rsquo;s where, doing what, for how much</em> — across the segment, region or function you&rsquo;re focused on.</p>
+    <div class="body-text">
+      <p>Unlike a search, the deliverable isn&rsquo;t a hire. It&rsquo;s intelligence: a comprehensive, anonymised picture of the senior talent pool in your defined market, with insight into who&rsquo;s mobile, who&rsquo;s settled, what they&rsquo;re paid, and where the next moves are likely to happen.</p>
+      <p>It&rsquo;s commissioned by founders sizing up a build-out, boards planning a succession, PE sponsors assessing a portfolio company&rsquo;s leadership depth, or M&amp;A teams stress-testing a target&rsquo;s key people. <strong>The work is always confidential, always bespoke, and always direct from James Leigh.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section style="padding-top: 0;">
+  <div class="container">
+    <div class="container--narrow" style="padding: 0; margin: 0 0 56px;">
+      <div class="section-eyebrow"><span class="num">02</span> When to use it</div>
+      <h2 class="section-title">Four scenarios where mapping <em>pays for itself.</em></h2>
+    </div>
+    <div class="usecases">
+      <div class="usecase">
+        <span class="usecase-tag">Pre-hire</span>
+        <h3>Before you commit to a search</h3>
+        <p>Map the market first. Understand who exists, what they cost, and whether your target profile is realistic before you write the brief — or before you decide whether to hire externally at all.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">PE / M&amp;A</span>
+        <h3>Due diligence on leadership</h3>
+        <p>Assess the depth of senior bench in a target company. Identify single points of failure, retention risk, and external candidates who could step in quickly if the deal closes.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">Strategy</span>
+        <h3>Build-out &amp; expansion planning</h3>
+        <p>Entering a new region or segment? Map the available talent before committing capital. Understand the moves, the comp, and the realistic timeline to building a credible team.</p>
+      </div>
+      <div class="usecase">
+        <span class="usecase-tag">Succession</span>
+        <h3>Quiet succession planning</h3>
+        <p>Identify potential successors for board or C-suite roles confidentially, well ahead of an announcement. The work is done discreetly, with no approach to candidates unless and until you decide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="deliv">
+  <div class="container">
+    <div class="container--narrow" style="padding: 0; margin: 0 0 64px;">
+      <div class="section-eyebrow"><span class="num">03</span> What you receive</div>
+      <h2 class="section-title">A structured intelligence report. <em>Yours to keep.</em></h2>
+      <p class="deliv-intro">The deliverable is a confidential PDF report plus a structured candidate dataset, presented in a working session with you and any nominated stakeholders.</p>
+    </div>
+    <div class="deliv-grid">
+      <div class="deliv-item">
+        <div class="deliv-item-num">i.</div>
+        <h4>Market overview</h4>
+        <p>The competitive landscape — operators, service companies, vendors and their relative scale. Recent leadership moves, ownership changes, and emerging entrants.</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-item-num">ii.</div>
+        <h4>Senior talent profiles</h4>
+        <p>Anonymised individual profiles of the senior population matching your target — current role, tenure, background, mobility signals and rough comp benchmark.</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-item-num">iii.</div>
+        <h4>Compensation benchmarks</h4>
+        <p>Salary, bonus, LTIP and total package ranges for the level and region in scope. Drawn from live market intelligence, not stale survey data.</p>
+      </div>
+      <div class="deliv-item">
+        <div class="deliv-item-num">iv.</div>
+        <h4>Strategic observations</h4>
+        <p>Where the market is moving, who&rsquo;s likely to be available in 6–12 months, and the practical implications for how you should approach your next hire or move.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS / TIMELINE -->
+<section class="process">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">04</span> How it works</div>
+    <h2 class="section-title">From scoping call to <em>delivered intelligence,</em> in four to six weeks.</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-tag">Week 1</div>
+        <h4>Scoping</h4>
+        <p>A discovery call to define the scope: market segment, geography, target seniority, the specific question you&rsquo;re trying to answer. We&rsquo;ll agree the deliverable and fee in writing before any work begins.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-tag">Weeks 1–4</div>
+        <h4>Research</h4>
+        <p>Desk-based competitive landscape work, then primary research — discreet conversations with our network, structured outreach to mapped individuals, comp validation against live offers and recent moves.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-tag">Week 5</div>
+        <h4>Synthesis</h4>
+        <p>Research is consolidated into the structured report, profiles are written up, and observations are drawn from the body of evidence rather than a single data point.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-tag">Week 6</div>
+        <h4>Delivery</h4>
+        <p>A working session — usually 60 to 90 minutes — to walk through the findings, answer questions, and discuss implications. Report and dataset delivered confidentially in your preferred format.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIDENTIALITY CALLOUT -->
+<section class="conf">
+  <div class="container">
+    <div class="conf-grid">
+      <div>
+        <span class="conf-mark">A note on confidentiality.</span>
+      </div>
+      <div>
+        <h3>Mapping work is confidential <em>by default.</em></h3>
+        <p style="margin-top: 16px;">No approach to any individual identifies you as the commissioning party unless we agree it explicitly in advance. Reports are delivered to named stakeholders only. NDAs are standard, and we&rsquo;re comfortable working under client-side legal frameworks for sensitive transactions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <h2>Considering a hire, a restructure, or a deal? <em>Map first.</em></h2>
+      </div>
+      <div class="cta-card-right">
+        <a href="mailto:enquiries@penleighinternational.com" class="btn btn-primary" style="align-self: flex-start;">Request a scoping call <span class="arrow">→</span></a>
+        <div class="meta">
+          <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a><br/>
+          <a href="tel:+441133204980">+44 (0)113 320 4980</a><br/>
+          <a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="retained-search.html">Retained Search</a></li>
+          <li><a href="market-mapping.html">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#markets">Markets</a></li>
+          <li><a href="index.html#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section > .container > *, .usecase, .deliv-item, .timeline-item').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>

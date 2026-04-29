@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About · Penleigh International</title>
+<meta name="description" content="Penleigh International is led by James Leigh, an executive search specialist with over a decade of experience in the midstream and subsea inspection markets." />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" href="/assets/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0d10">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.penleighinternational.com/about">
+<meta property="og:title" content="About Penleigh International">
+<meta property="og:description" content="One person, on every search. Penleigh International is led by James Leigh — no junior handover, no rotating account manager. Just deep expertise in one sector.">
+<meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Penleigh International">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Penleigh International">
+<meta name="twitter:description" content="One person, on every search. Penleigh International is led by James Leigh — no junior handover, no rotating account manager. Just deep expertise in one sector.">
+<meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0d10;
+    --paper: #f4f1ea;
+    --paper-warm: #ebe6db;
+    --navy: #11264a;
+    --navy-deep: #0a1830;
+    --steel: #5b6573;
+    --rule: #1a2030;
+    --amber: #d4823a;
+    --amber-soft: #e9a96a;
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Geist', system-ui, -apple-system, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+  .container--narrow { max-width: 920px; }
+  @media (max-width: 720px) { .container { padding: 0 20px; } }
+
+  /* NAV */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 18px 0;
+    background: rgba(244, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
+  }
+  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
+  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    border: 1px solid var(--ink);
+    padding: 9px 20px;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* PAGE HERO — portrait-led */
+  .page-hero {
+    background: var(--paper);
+    color: var(--ink);
+    padding: 180px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+  }
+  .breadcrumb {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb .sep { color: var(--amber); }
+  .page-hero h1 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(40px, 5.5vw, 76px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 36px;
+    font-variation-settings: "opsz" 144;
+  }
+  .page-hero h1 em { font-style: italic; color: var(--navy); }
+  .page-hero .lede {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--steel);
+    max-width: 50ch;
+  }
+  .portrait {
+    aspect-ratio: 4/5;
+    background-size: cover;
+    background-position: center top;
+    background-color: var(--paper-warm);
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 30px 60px rgba(10,13,16,0.18);
+  }
+  .portrait::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(10,13,16,0.25));
+    border-radius: 4px;
+    pointer-events: none;
+  }
+  .portrait-caption {
+    position: absolute;
+    bottom: 24px; left: 28px; right: 28px;
+    color: var(--paper);
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+  }
+  .portrait-caption strong { font-style: normal; font-family: var(--sans); font-weight: 500; font-size: 13px; letter-spacing: 0.05em; }
+
+  section { padding: 120px 0; }
+  @media (max-width: 720px) { section { padding: 72px 0; } }
+
+  .section-eyebrow {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-eyebrow .num {
+    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(32px, 4.2vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    max-width: 22ch;
+  }
+  .section-title em { font-style: italic; color: var(--navy); }
+
+  .lead-text {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1.35;
+    font-weight: 350;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+    max-width: 32ch;
+  }
+  .lead-text em { color: var(--navy); font-style: italic; }
+  .body-text { color: var(--steel); font-size: 16.5px; line-height: 1.7; max-width: 62ch; }
+  .body-text p { margin-bottom: 18px; }
+  .body-text strong { color: var(--ink); font-weight: 500; }
+
+  /* STORY — two-column with pull-quote */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 960px) { .story-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .pullquote {
+    margin: 48px 0;
+    padding-left: 28px;
+    border-left: 2px solid var(--amber);
+  }
+  .pullquote p {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 350;
+    font-size: 22px;
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    max-width: 36ch;
+  }
+
+  /* VALUES — alternative grid layout */
+  .values { background: var(--ink); color: var(--paper); position: relative; overflow: hidden; }
+  .values::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 80% 20%, rgba(212,130,58,0.1), transparent 50%),
+      radial-gradient(ellipse at 10% 100%, rgba(17,38,74,0.5), transparent 60%);
+    pointer-events: none;
+  }
+  .values .container { position: relative; z-index: 2; }
+  .values .section-eyebrow { color: rgba(244,241,234,0.55); }
+  .values .section-eyebrow .num { color: var(--amber-soft); }
+  .values .section-title { color: var(--paper); }
+  .values .section-title em { color: var(--amber-soft); }
+  .values-intro { color: rgba(244,241,234,0.7); max-width: 56ch; margin-bottom: 80px; font-size: 17px; line-height: 1.6; }
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: rgba(244,241,234,0.12);
+    border: 1px solid rgba(244,241,234,0.12);
+  }
+  @media (max-width: 720px) { .values-grid { grid-template-columns: 1fr; } }
+  .value {
+    background: var(--ink);
+    padding: 56px 48px;
+    position: relative;
+  }
+  .value-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--amber-soft);
+    margin-bottom: 12px;
+  }
+  .value h3 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .value p {
+    color: rgba(244,241,234,0.7);
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 38ch;
+  }
+
+  /* APPROACH — single-column manifesto */
+  .approach { background: var(--paper-warm); }
+  .approach-list {
+    margin-top: 56px;
+    display: grid;
+    gap: 0;
+  }
+  .approach-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 32px;
+    padding: 36px 0;
+    border-top: 1px solid rgba(10,13,16,0.15);
+    align-items: start;
+  }
+  .approach-item:last-child { border-bottom: 1px solid rgba(10,13,16,0.15); }
+  @media (max-width: 720px) {
+    .approach-item { grid-template-columns: 1fr; gap: 4px; padding: 28px 0; }
+  }
+  .approach-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 1;
+    color: var(--amber);
+    letter-spacing: -0.02em;
+  }
+  .approach-item h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+  }
+  .approach-item p {
+    color: var(--steel);
+    font-size: 15.5px;
+    line-height: 1.65;
+    max-width: 64ch;
+  }
+
+  /* CTA */
+  .cta { background: var(--paper); padding: 100px 0; }
+  .cta-card {
+    background: var(--navy);
+    color: var(--paper);
+    padding: 80px 64px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,130,58,0.3), transparent 60%);
+    pointer-events: none;
+  }
+  @media (max-width: 960px) {
+    .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; }
+  }
+  .cta-card h2 {
+    font-family: var(--serif);
+    font-weight: 350;
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+  .cta-card h2 em { color: var(--amber-soft); font-style: italic; }
+  .cta-card-right {
+    display: flex; flex-direction: column; gap: 20px;
+    position: relative; z-index: 1;
+  }
+  .cta-card-right .meta { color: rgba(244,241,234,0.7); font-size: 14.5px; line-height: 1.7; }
+  .cta-card-right .meta a:hover { color: var(--amber-soft); }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--amber); color: var(--ink); }
+  .btn-primary:hover { background: var(--amber-soft); transform: translateY(-1px); }
+  .btn .arrow { display: inline-block; transition: transform 0.2s; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* FOOTER */
+  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
+  .footer-col h6 {
+    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 12px; font-size: 14px; }
+  .footer-col a:hover { color: var(--paper); }
+  .footer-bottom {
+    border-top: 1px solid rgba(244,241,234,0.1);
+    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
+  }
+
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <a href="index.html" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+    </a>
+    <div class="nav-links">
+      <a href="about.html" class="active">About</a>
+      <a href="retained-search.html">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="contact.html" class="nav-cta">Start a search →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <span style="color: var(--ink);">About</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1>One person, on every search. <em>That&rsquo;s the point.</em></h1>
+        <p class="lede">Penleigh International is led — and run — by James Leigh. There&rsquo;s no junior handover, no rotating account manager, no billable juniors learning on your role. Just one experienced search consultant, working a focused list of clients in a market he knows deeply.</p>
+      </div>
+      <div class="portrait" style="background-image: url('/assets/james-400.webp');">
+        <div class="portrait-caption">
+          <span><strong>James Leigh</strong></span>
+          <span>Founder &amp; Director</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section style="padding: 100px 0;">
+  <div class="container">
+    <div class="story-grid">
+      <div>
+        <div class="section-eyebrow"><span class="num">01</span> The story</div>
+        <h2 class="section-title">A specialist firm by design, <em>not by accident.</em></h2>
+      </div>
+      <div>
+        <p class="lead-text">Penleigh was founded on a simple observation: <em>generalist recruiters can&rsquo;t reach the senior people who matter</em> in midstream and subsea — because they don&rsquo;t know who those people are.</p>
+        <div class="body-text">
+          <p>James spent his early career inside specialist energy recruitment, watching the same pattern play out: critical roles handed to agencies running broad searches, contingent-style, with shortlists pulled from public sources and the same handful of LinkedIn-active candidates. The roles either filled badly or didn&rsquo;t fill at all.</p>
+          <p>Penleigh exists to do the opposite. <strong>Retained engagements only. One sector. One person leading every search.</strong> The network &mdash; now over 6,000 senior contacts across 21 countries &mdash; has been built role-by-role, conversation-by-conversation, over more than a decade in the same niche.</p>
+          <p>That depth is the entire product. It&rsquo;s why hiring managers come back: 88% of clients in the last four years are repeat customers. It&rsquo;s also why we say no to roles outside our scope, even when the fee is on the table.</p>
+        </div>
+        <div class="pullquote">
+          <p>&ldquo;If we don&rsquo;t already know who the right ten people in the world are for your role &mdash; or know how to find them within a fortnight &mdash; you should hire someone else.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">02</span> Values</div>
+    <h2 class="section-title">Four words we <em>actually mean.</em></h2>
+    <p class="values-intro">Most company values pages are an exercise in throat-clearing. Ours are short because they have to be — they&rsquo;re tested on every search, with every client.</p>
+  </div>
+  <div class="container">
+    <div class="values-grid">
+      <div class="value">
+        <div class="value-num">i.</div>
+        <h3>Service</h3>
+        <p>We listen first, talk second. Your interests come ahead of ours, every time. We communicate clearly, honestly, and without filler — including when the message is one you didn&rsquo;t want to hear.</p>
+      </div>
+      <div class="value">
+        <div class="value-num">ii.</div>
+        <h3>Trust</h3>
+        <p>We do what we say, when we say we&rsquo;ll do it. Trust isn&rsquo;t earned by mission statements; it&rsquo;s earned by turning up, returning calls, and getting the small things right. Eight in ten of our clients hire us again. That&rsquo;s the only metric for trust that counts.</p>
+      </div>
+      <div class="value">
+        <div class="value-num">iii.</div>
+        <h3>Perseverance</h3>
+        <p>We specialise in the searches no one else can crack. That requires energy, drive, and the patience to keep digging when the obvious candidates have all turned the role down. Some briefs are simply tougher than others. We dig deeper.</p>
+      </div>
+      <div class="value">
+        <div class="value-num">iv.</div>
+        <h3>Delivery</h3>
+        <p>We ask to be judged on results. 97% campaign success rate. 77% of placed candidates still in role four years on. Nothing else we say matters unless it shows up in numbers like these.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH / WAYS WE WORK -->
+<section class="approach">
+  <div class="container container--narrow">
+    <div class="section-eyebrow"><span class="num">03</span> The way we work</div>
+    <h2 class="section-title">A few things you should <em>know up front.</em></h2>
+    <div class="approach-list">
+      <div class="approach-item">
+        <div class="approach-num">01</div>
+        <div>
+          <h4>Retained only</h4>
+          <p>We don&rsquo;t take contingent work. The economics push every recruiter in the wrong direction — toward speed over fit, volume over precision. If we&rsquo;re not partnered with you on a search, we can&rsquo;t do our best work. So we don&rsquo;t pretend.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">02</div>
+        <div>
+          <h4>One sector, deeply</h4>
+          <p>Midstream and subsea inspection. Pipeline services, pipeline construction, NDT, robotics-led inspection. We don&rsquo;t take roles outside this scope, even when offered. The depth of network is the entire reason a client should pick us — diluting it would defeat the purpose.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">03</div>
+        <div>
+          <h4>James, on every brief</h4>
+          <p>No junior handover, no off-the-shelf longlists. The person you brief is the person who runs the search, calls the candidates, and presents the shortlist. That&rsquo;s a deliberate constraint on how many clients we take at once.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">04</div>
+        <div>
+          <h4>HireInsight on every shortlist</h4>
+          <p>Every candidate is presented through HireInsight: video introduction, psychometric profile, competency assessment, references, comp expectations. CVs are a poor way to evaluate senior people. We give you a better one as standard.</p>
+        </div>
+      </div>
+      <div class="approach-item">
+        <div class="approach-num">05</div>
+        <div>
+          <h4>Honest about scope</h4>
+          <p>If a brief sits outside what we genuinely do well, we&rsquo;ll say so — and where we can, point you at a specialist who&rsquo;ll serve you better than we would. The relationship matters more than any single fee.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div>
+        <h2>Got a search in mind? <em>Let&rsquo;s talk it through.</em></h2>
+      </div>
+      <div class="cta-card-right">
+        <a href="contact.html" class="btn btn-primary" style="align-self: flex-start;">Get in touch <span class="arrow">→</span></a>
+        <div class="meta">
+          <a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a><br/>
+          <a href="tel:+441133204980">+44 (0)113 320 4980</a><br/>
+          <a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <p>Retained executive search for the global midstream and subsea inspection markets.</p>
+      </div>
+      <div class="footer-col">
+        <h6>Services</h6>
+        <ul>
+          <li><a href="retained-search.html">Retained Search</a></li>
+          <li><a href="market-mapping.html">Market Mapping</a></li>
+          <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Company</h6>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#markets">Markets</a></li>
+          <li><a href="index.html#clients">Clients</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h6>Get in touch</h6>
+        <ul>
+          <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
+          <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('section > .container > *, .value, .approach-item').forEach(el => {
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+</script>
+
+</body>
+</html>

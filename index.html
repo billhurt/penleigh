@@ -633,6 +633,22 @@
     border: 1px solid rgba(10,13,16,0.12);
     margin-bottom: 80px;
   }
+  .client-logo img {
+    filter: brightness(0);
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
+    max-height: 40px;
+    width: auto;
+  }
+  .client-logo svg {
+    fill: black; /* or your brand colour */
+    height: 40px;
+    width: auto;
+  }
+
+  .client-logo img:hover {
+    opacity: 1;
+  }
   @media (max-width: 720px) { .client-logos { grid-template-columns: repeat(2, 1fr); } }
   .client-logo {
     background: var(--paper);
@@ -998,14 +1014,31 @@
       <p>A selection of the operators, service companies and inspection-technology vendors we&rsquo;ve placed senior talent into. Logos shown with permission.</p>
     </div>
     <div class="client-logos">
-      <div class="client-logo">Irth</div>
-      <div class="client-logo">Stats Group</div>
-      <div class="client-logo">NDT Global</div>
-      <div class="client-logo">DarkVision</div>
-      <div class="client-logo">Sonomatic</div>
-      <div class="client-logo">Entegra</div>
-      <div class="client-logo">Rosen</div>
-      <div class="client-logo">Halliburton</div>
+      <!-- NDT Global - SVG from their own CDN -->
+      <div class="client-logo">
+        <img src="https://images.ctfassets.net/vs1cvwqhrsnd/2mUcpBweNRsLxAKG9MGjRX/9056e1e8a6e4d4e082586aeda5f59f1f/ndt-logo.svg" alt="NDT Global">
+      </div>
+    
+      <!-- ROSEN Group - from their content hub -->
+      <div class="client-logo">
+        <img src="https://contenthub.rosen-group.com/api/public/content/07256bf6546a41f5b24d3393f12bab1e?v=779e35dd&t=rw103" alt="ROSEN Group">
+      </div>
+    
+      <!-- Halliburton - SVG from their Brandfolder CDN -->
+      <div class="client-logo">
+        <img src="https://cdn.brandfolder.io/3I2CY2XL/as/vkc5w586w5gtr898396p3w/halliburton-logo.svg" alt="Halliburton">
+      </div>
+    
+      <!-- Sonomatic - PNG from their WordPress -->
+      <div class="client-logo">
+        <img src="https://sonomatic.com/wp-content/uploads/sites/7/cropped-Untitled-design-7.png" alt="Sonomatic">
+      </div>
+    
+      <!-- Irth, Stats Group, DarkVision, Intero - source from their websites -->
+      <div class="client-logo"><img src="https://irthsolutions.com/hubfs/Irth_Logo.svg" alt="Irth"></div>
+      <div class="client-logo"><img src="https://www.statsgroup.com/hs-fs/hubfs/STATS_Group_2022-compressed.png?width=160&height=40&name=STATS_Group_2022-compressed.png" alt="Stats Group"></div>
+      <div class="client-logo"><img src="" alt="DarkVision"></div>
+      <div class="client-logo"><img src="" alt="Intero Integrity"></div>
     </div>
 
     <div class="testimonial-block">

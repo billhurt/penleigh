@@ -8,63 +8,63 @@
 [[redirects]]
   from = "/about"
   to = "/about.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/contact"
   to = "/contact.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/retained-search"
   to = "/retained-search.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/market-mapping"
   to = "/market-mapping.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/privacy"
   to = "/privacy.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/terms"
   to = "/terms.html"
-  status = 200
+  status = 301
 
 # Trailing slash variants
 [[redirects]]
   from = "/about/"
   to = "/about.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/contact/"
   to = "/contact.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/retained-search/"
   to = "/retained-search.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/market-mapping/"
   to = "/market-mapping.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/privacy/"
   to = "/privacy.html"
-  status = 200
+  status = 301
 
 [[redirects]]
   from = "/terms/"
   to = "/terms.html"
-  status = 200
+  status = 301
 
 # Security headers (sensible defaults for a brochure site)
 [[headers]]

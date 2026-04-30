@@ -456,10 +456,10 @@
 
         <form id="contact-form"
               name="contact"
+              action="/contact"
               method="POST"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              netlify>
+              data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label>Don&rsquo;t fill this out: <input name="bot-field" /></label>
@@ -560,7 +560,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <h4>How quickly will I hear back?</h4>
-        <p>Usually within a working day. If you&rsquo;ve flagged something time-sensitive in your message, sooner.</p>
+        <p>We respond usually within a working day. If you&rsquo;ve flagged something time-sensitive in your message, sooner.</p>
       </div>
       <div class="faq-item">
         <h4>Do I need to commit to anything to start a conversation?</h4>
@@ -647,7 +647,7 @@
     const body = new URLSearchParams(formData).toString();
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch(window.location.pathname, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body

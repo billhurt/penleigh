@@ -18,7 +18,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.penleighinternational.com/contact">
 <meta property="og:title" content="Contact · Penleigh International">
-<meta property="og:description" content="Have a proper conversation. Drop a note or pick up the phone — James responds personally, usually within a working day.">
+<meta property="og:description" content="Have a proper conversation. Drop a note or pick up the phone — we respond within a working day.">
 <meta property="og:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -27,7 +27,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact · Penleigh International">
-<meta name="twitter:description" content="Have a proper conversation. Drop a note or pick up the phone — James responds personally, usually within a working day.">
+<meta name="twitter:description" content="Have a proper conversation. Drop a note or pick up the phone — we respond within a working day.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -244,6 +244,7 @@
   .btn-submit {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 18px 32px;
     border-radius: 999px;
@@ -258,6 +259,10 @@
     justify-self: start;
     margin-top: 16px;
   }
+  /* Full-width centred button on mobile */
+  @media (max-width: 960px) {
+    .btn-submit { justify-self: stretch; }
+  }
   .btn-submit:hover { background: var(--navy); transform: translateY(-1px); }
   .btn-submit .arrow { transition: transform 0.2s; }
   .btn-submit:hover .arrow { transform: translateX(3px); }
@@ -269,6 +274,12 @@
     border-radius: 4px;
     position: sticky;
     top: 100px;
+  }
+  @media (max-width: 960px) {
+    .direct {
+      position: static;
+      padding: 32px 24px;
+    }
   }
   .direct-eyebrow {
     font-family: var(--sans);
@@ -315,6 +326,12 @@
     font-size: 18px;
     line-height: 1.4;
     letter-spacing: -0.01em;
+    /* Long email address wraps cleanly rather than overflowing */
+    word-break: break-word;
+  }
+  @media (max-width: 960px) {
+    /* Slightly smaller val text so email address doesn't force wide layout */
+    .direct-row .val { font-size: 15px; }
   }
   .direct-row .val a { transition: color 0.2s; }
   .direct-row .val a:hover { color: var(--navy); }
@@ -378,10 +395,8 @@
   /* FOOTER */
   footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
-  @media (max-width: 720px) { .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  } }
+  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+  @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
   .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
   .footer-col h6 {
@@ -396,7 +411,6 @@
     padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
     gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
   }
-  .footer-bottom a:hover { color: var(--paper); }
 
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -426,25 +440,26 @@
       <span class="sep">/</span>
       <span style="color: var(--paper);">Contact</span>
     </div>
-    <h1>Let&rsquo;s <em>start the conversation.</em></h1>
-    <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. We'll respond within a working day.</p>
+    <h1>Let&rsquo;s have a <em>proper conversation.</em></h1>
+    <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. We respond within a working day.</p>
   </div>
 </section>
 
 <!-- CONTACT FORM + DETAILS -->
-<section style="padding-top: 100px;">
+<section style="padding: 100px 0 120px;">
   <div class="container">
     <div class="contact-grid">
       <div>
         <div class="form-eyebrow"><span class="num">01</span> Send a message</div>
         <h2 class="form-title">Tell us a little about <em>what you need.</em></h2>
-        <p class="form-intro">A few short fields to help us understand the shape of your enquiry before we come back to you. Nothing here commits you to anything — initial conversations are always confidential and never charged for.</p>
+        <p class="form-intro">A few short fields to help us understand the shape of your enquiry before he comes back to you. Nothing here commits you to anything — initial conversations are always confidential and never charged for.</p>
 
         <form id="contact-form"
               name="contact"
               method="POST"
               data-netlify="true"
-              data-netlify-honeypot="bot-field">
+              data-netlify-honeypot="bot-field"
+              netlify>
           <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label>Don&rsquo;t fill this out: <input name="bot-field" /></label>
@@ -602,13 +617,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
-      <span>Web Design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
   }, { threshold: 0.1 });
@@ -617,19 +631,14 @@
     io.observe(el);
   });
 
-  // Form: AJAX submission to Netlify Forms (keeps user on the page)
-  // Netlify intercepts POSTs to its own pages when the form has data-netlify="true"
-  // and form-name field is set. We URL-encode the FormData and POST to "/".
   document.getElementById('contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('.btn-submit');
     const originalHTML = btn.innerHTML;
 
-    // Honeypot: if filled, silently drop
     if (form.querySelector('[name="bot-field"]').value) return;
 
-    // Disable button during submission
     btn.disabled = true;
     btn.innerHTML = 'Sending&hellip;';
     btn.style.opacity = '0.6';
@@ -644,7 +653,6 @@
         body
       });
       if (!response.ok) throw new Error('Submission failed');
-      // Success state
       btn.innerHTML = 'Sent — thanks. We&rsquo;ll be in touch.';
       btn.style.background = 'var(--amber)';
       btn.style.color = 'var(--ink)';

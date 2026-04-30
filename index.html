@@ -293,7 +293,6 @@
     background: rgba(10,13,16,0.1);
     border: 1px solid rgba(10,13,16,0.1);
     margin-bottom: 48px;
-    /* Prevent grid from bleeding outside its container */
     overflow: hidden;
     width: 100%;
   }
@@ -305,39 +304,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 28px 36px;
+    padding: 24px 28px;
     transition: background 0.2s;
-    /* Prevent individual cells overflowing */
     min-width: 0;
     overflow: hidden;
   }
-  @media (max-width: 720px) {
-    .client-logo { padding: 20px 16px; }
-  }
   .client-logo:hover { background: var(--paper-warm); }
   .client-logo img {
-    height: 48px;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
     object-fit: contain;
     mix-blend-mode: multiply;
-  }
-  @media (max-width: 720px) {
-    .client-logo img { height: 36px; }
-  }
-  /* Stats Group and Sonomatic are portrait/square — taller to stay proportional */
-  .client-logo:nth-child(2) img,
-  .client-logo:nth-child(5) img { height: 64px; }
-  @media (max-width: 720px) {
-    .client-logo:nth-child(2) img,
-    .client-logo:nth-child(5) img { height: 48px; }
   }
 
   /* Testimonial — navy atmospheric bleeds only, one each side */
   .testimonial-block {
     background: var(--ink);
     color: var(--paper);
-    padding: 80px 64px;
+    padding: 40px 80px;
     border-radius: 4px;
     position: relative;
     overflow: hidden;
@@ -378,7 +363,7 @@
   .testimonial-cite { margin-top: 28px; text-align: center; font-size: 13px; color: rgba(244,241,234,0.55); letter-spacing: 0.05em; position: relative; z-index: 2; }
 
   /* CTA — tight to testimonial */
-  .cta { background: var(--paper); padding: 40px 0 100px; }
+  .cta { background: var(--paper); padding: 0px 0 100px; }
   @media (max-width: 720px) { .cta { padding: 32px 0 72px; } }
   .cta-card {
     background: var(--navy); color: var(--paper);
@@ -610,7 +595,7 @@
 
 <!-- EDITORIAL IMAGE: Subsea -->
 <div class="image-panel">
-  <img
+  <img 
     src="https://images.unsplash.com/photo-1723435732442-c0a7ca08e7e9?w=2400&q=95&auto=format&fit=crop"
     alt="Offshore platform at night, Campos Basin"
     loading="lazy"
@@ -678,17 +663,17 @@
       <div class="client-logo"><img src="/assets/logos/stats.webp" alt="STATS Group" /></div>
       <div class="client-logo"><img src="/assets/logos/ndt.webp" alt="NDT Global" /></div>
       <div class="client-logo"><img src="/assets/logos/darkvision.webp" alt="DarkVision" /></div>
-      <div class="client-logo"><img src="/assets/logos/sonomatic.webp" alt="Sonomatic" /></div>
+      <div class="client-logo"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
       <div class="client-logo"><img src="/assets/logos/entegra.webp" alt="Entegra" /></div>
-      <div class="client-logo"><img src="/assets/logos/rosen.webp" alt="ROSEN Group" /></div>
+      <div class="client-logo"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
       <div class="client-logo"><img src="/assets/logos/intero.webp" alt="Intero Integrity" /></div>
-      <div class="client-logo"><img src="/assets/logos/halliburton.webp" alt="Halliburton" /></div>
+      <div class="client-logo"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
     </div>
 
     <div class="testimonial-block">
       <span class="quote-mark">&ldquo;</span>
       <blockquote>
-        &ldquo;TSC Subsea recently engaged with Penleigh International to recruit for a new position in the GoM region. The whole process was both engaging and seamless, resulting in a number of good candidates and a swift offer to who we hope will be a <em>perfect addition to our global team.</em>&rdquo;
+        &ldquo;Penleigh International fully understand the industry. We see them not only as a supplier of top talent, but as a<em> business partner </em>in understanding employment trends and strategic positions. I would happily recommend to those recruiting, to use Penleigh International.&rdquo;
       </blockquote>
       <div class="testimonial-cite">— Jonathan Bancroft · VP/GM · TSC Subsea</div>
     </div>
@@ -749,7 +734,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span>© <script>document.write(new Date().getFullYear())</script> Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
       <span>Web design by <a href="https://tredgolddigital.com/" target="_blank" rel="noopener">Tredgold Digital</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
     </div>
   </div>

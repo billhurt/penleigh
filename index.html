@@ -293,6 +293,9 @@
     background: rgba(10,13,16,0.1);
     border: 1px solid rgba(10,13,16,0.1);
     margin-bottom: 48px;
+    /* Prevent grid from bleeding outside its container */
+    overflow: hidden;
+    width: 100%;
   }
   @media (max-width: 720px) { .client-logos { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 720px) { .client-logo:last-child:nth-child(odd) { grid-column: span 2; } }
@@ -304,18 +307,31 @@
     justify-content: center;
     padding: 28px 36px;
     transition: background 0.2s;
+    /* Prevent individual cells overflowing */
+    min-width: 0;
+    overflow: hidden;
+  }
+  @media (max-width: 720px) {
+    .client-logo { padding: 20px 16px; }
   }
   .client-logo:hover { background: var(--paper-warm); }
   .client-logo img {
     height: 48px;
     width: auto;
-    max-width: 80%;
+    max-width: 100%;
     object-fit: contain;
     mix-blend-mode: multiply;
+  }
+  @media (max-width: 720px) {
+    .client-logo img { height: 36px; }
   }
   /* Stats Group and Sonomatic are portrait/square — taller to stay proportional */
   .client-logo:nth-child(2) img,
   .client-logo:nth-child(5) img { height: 64px; }
+  @media (max-width: 720px) {
+    .client-logo:nth-child(2) img,
+    .client-logo:nth-child(5) img { height: 48px; }
+  }
 
   /* Testimonial — navy atmospheric bleeds only, one each side */
   .testimonial-block {

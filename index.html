@@ -35,15 +35,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0a0d10;
-    --paper: #f4f1ea;
-    --paper-warm: #ebe6db;
-    --navy: #11264a;
-    --navy-deep: #0a1830;
-    --steel: #5b6573;
-    --rule: #1a2030;
-    --amber: #d4823a;
-    --amber-soft: #e9a96a;
+    --ink: #0e1186;           /* brand blue — replaces black */
+    --paper: #ffffff;         /* clean white */
+    --paper-warm: #f0f2ff;   /* very light blue tint — replaces cream */
+    --navy: #1d2590;          /* brand blue mid */
+    --navy-deep: #0e1186;     /* brand blue deep */
+    --steel: #6b7280;         /* neutral grey for body text */
+    --rule: #1d2590;
+    --amber: #4f5de0;         /* light blue accent — replaces amber */
+    --amber-soft: #8b96f0;
     --serif: 'Fraunces', 'Georgia', serif;
     --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
@@ -74,7 +74,7 @@
   }
   nav.top .row { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 28px; width: auto; }
+  .nav-logo img { height: 28px; width: auto; filter: brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(1200%) hue-rotate(220deg) brightness(85%); }
   .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
   .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
   .nav-links a:hover { opacity: 1; }
@@ -139,7 +139,7 @@
     padding: 16px 28px; border-radius: 999px; font-size: 14px; font-weight: 500;
     transition: all 0.2s; cursor: pointer; border: 1px solid transparent;
   }
-  .btn-primary { background: var(--amber); color: var(--ink); }
+  .btn-primary { background: var(--amber); color: var(--paper); }
   .btn-primary:hover { background: var(--amber-soft); transform: translateY(-1px); }
   .btn-ghost { border-color: rgba(244,241,234,0.3); color: var(--paper); }
   .btn-ghost:hover { border-color: var(--paper); }
@@ -259,8 +259,8 @@
   .step-highlight .step-dot { background: var(--paper); width: 18px; height: 18px; margin-top: 26px; }
   .step-highlight { background: rgba(244,241,234,0.04); padding: 20px 20px 28px; margin: -20px -20px 0; border-radius: 4px; border: 1px solid rgba(244,241,234,0.1); }
   .hire-insight-tag {
-    display: inline-block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--amber); margin-top: 14px; padding: 4px 8px; border: 1px solid var(--amber); border-radius: 3px; transition: all 0.2s;
+  display: inline-block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--paper); margin-top: 14px; padding: 4px 8px; border: 1px solid var(--amber); border-radius: 3px; transition: all 0.2s;
   }
   .hire-insight-tag:hover { background: var(--amber); color: var(--ink); }
 
@@ -286,36 +286,46 @@
   .clients-head p { color: var(--steel); max-width: 56ch; font-size: 17px; line-height: 1.6; }
   .clients { background: var(--paper); padding-bottom: 60px !important; }
 
-  .client-logos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(10,13,16,0.1);
-    border: 1px solid rgba(10,13,16,0.1);
-    margin-bottom: 48px;
+  /* Logo scrolling strip — mirrors the text strip above the fold */
+  .logo-strip-wrap {
     overflow: hidden;
-    width: 100%;
-  }
-  @media (max-width: 720px) { .client-logos { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 720px) { .client-logo:last-child:nth-child(odd) { grid-column: span 2; } }
-  .client-logo {
+    margin-bottom: 48px;
     background: var(--paper);
-    aspect-ratio: 16/7;
+    /* Fade edges so the scroll feels infinite */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+  .logo-strip {
     display: flex;
+    gap: 0;
+    white-space: nowrap;
+    animation: logo-scroll 35s linear infinite;
+    will-change: transform;
+    align-items: center;
+    width: max-content;
+  }
+  /* Pause on hover — gives clients a chance to read each logo */
+  .logo-strip-wrap:hover .logo-strip { animation-play-state: paused; }
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .logo-strip-item {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 28px;
-    transition: background 0.2s;
-    min-width: 0;
-    overflow: hidden;
+    flex-shrink: 0;
+    width: 160px;
+    padding: 0 24px;
   }
-  .client-logo:hover { background: var(--paper-warm); }
-  .client-logo img {
-    width: 100%;
-    height: 100%;
-    max-width: 50%;
+
+  .logo-strip-item img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
     mix-blend-mode: multiply;
+    display: block;
   }
 
   /* Testimonial — navy atmospheric bleeds only, one each side */
@@ -390,7 +400,7 @@
   .cta-btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
     padding: 16px 28px; border-radius: 999px; font-size: 15px; font-weight: 500;
-    background: var(--amber); color: var(--ink); border: none; transition: all 0.2s;
+    background: var(--amber); color: var(--paper); border: none; transition: all 0.2s;
     align-self: flex-start;
   }
   .cta-btn:hover { background: var(--amber-soft); transform: translateY(-1px); }
@@ -422,13 +432,93 @@
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
 </style>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.penleighinternational.com/#organization",
+        "name": "Penleigh International",
+        "url": "https://www.penleighinternational.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.penleighinternational.com/assets/logo-long-dark.webp"
+        },
+        "description": "Retained executive search firm specialising in the global midstream and subsea inspection markets.",
+        "foundingDate": "2020",
+        "numberOfEmployees": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 10
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "32 Park Cross Street",
+          "addressLocality": "Leeds",
+          "postalCode": "LS1 2QH",
+          "addressCountry": "GB"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-113-320-4980",
+          "email": "enquiries@penleighinternational.com",
+          "contactType": "customer service"
+        },
+        "sameAs": [
+          "https://uk.linkedin.com/company/penleighinternational"
+        ],
+        "areaServed": "Worldwide",
+        "knowsAbout": [
+          "Executive Search",
+          "Pipeline Services Recruitment",
+          "Subsea Inspection Recruitment",
+          "Pipeline Construction Recruitment",
+          "NDT Services Recruitment",
+          "Market Mapping"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.penleighinternational.com/#website",
+        "url": "https://www.penleighinternational.com",
+        "name": "Penleigh International",
+        "publisher": {
+          "@id": "https://www.penleighinternational.com/#organization"
+        }
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.penleighinternational.com/#localbusiness",
+        "name": "Penleigh International",
+        "url": "https://www.penleighinternational.com",
+        "telephone": "+44-113-320-4980",
+        "email": "enquiries@penleighinternational.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "32 Park Cross Street",
+          "addressLocality": "Leeds",
+          "postalCode": "LS1 2QH",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.7997,
+          "longitude": -1.5492
+        },
+        "image": "https://www.penleighinternational.com/assets/og-image.jpg",
+        "priceRange": "££££"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <nav class="top">
   <div class="container row">
     <a href="#top" class="nav-logo">
-      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+      <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
     </a>
     <div class="nav-links">
       <a href="about.html">About</a>
@@ -454,7 +544,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="/assets/logo-mark-light.webp" alt="" aria-hidden="true" />
+        <img src="/assets/logo-long-light.webp" alt="" aria-hidden="true" />
       </div>
     </div>
   </div>
@@ -463,6 +553,16 @@
 <!-- SCROLLING STRIP -->
 <div class="strip">
   <div class="strip-inner">
+    <span>Pipeline Services</span>
+    <span>Subsea Inspection</span>
+    <span>Pipeline Construction</span>
+    <span>NDT Services</span>
+    <span>Robotics &amp; Inspection</span>
+    <span>Pipeline Services</span>
+    <span>Subsea Inspection</span>
+    <span>Pipeline Construction</span>
+    <span>NDT Services</span>
+    <span>Robotics &amp; Inspection</span>
     <span>Pipeline Services</span>
     <span>Subsea Inspection</span>
     <span>Pipeline Construction</span>
@@ -506,7 +606,7 @@
 <!-- EDITORIAL IMAGE: Pipeline -->
 <div class="image-panel">
   <img
-    src="https://images.unsplash.com/photo-1608700272594-4b268d1f1ac6?w=1600&q=80&auto=format&fit=crop"
+    src="assets/pipeline-infrastructure.jpg"
     alt="Midstream pipeline infrastructure, Kazakhstan"
     loading="lazy"
     style="object-position: center 85%;"
@@ -593,15 +693,15 @@
   </div>
 </section>
 
-<!-- EDITORIAL IMAGE: Subsea -->
+<!-- EDITORIAL IMAGE: Midstream -->
 <div class="image-panel">
   <img
-    src="https://images.unsplash.com/photo-1633829131104-e2134f75c6e5?w=2400&q=95&auto=format&fit=crop"
-    alt="Oil rig at sunset, Huntington Beach"
+    src="assets/subsea-oil-and-gas.jpg"
+    alt="Subsea pipeline infrastructure"
     loading="lazy"
-    style="filter: brightness(0.9); object-position: center 73%;"
+    style="filter: brightness(0.9); object-position: center 52%;"
   />
-  <span class="image-panel-caption">Oil rig at sunset, Huntington Beach</span>
+  <span class="image-panel-caption">Subsea pipeline infrastructure</span>
 </div>
 
 <!-- MARKETS -->
@@ -658,16 +758,27 @@
       <h2 class="section-title">Who we&rsquo;ve worked <em>with.</em></h2>
       <p>A selection of the operators, service companies and inspection-technology vendors we&rsquo;ve placed senior talent into.</p>
     </div>
-    <div class="client-logos">
-      <div class="client-logo"><img src="/assets/logos/irth.png" alt="Irth Solutions" /></div>
-      <div class="client-logo"><img src="/assets/logos/stats.webp" alt="STATS Group" /></div>
-      <div class="client-logo"><img src="/assets/logos/ndt.webp" alt="NDT Global" /></div>
-      <div class="client-logo"><img src="/assets/logos/darkvision.webp" alt="DarkVision" /></div>
-      <div class="client-logo"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
-      <div class="client-logo"><img src="/assets/logos/entegra.webp" alt="Entegra" /></div>
-      <div class="client-logo"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
-      <div class="client-logo"><img src="/assets/logos/intero.webp" alt="Intero Integrity" /></div>
-      <div class="client-logo"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
+    <div class="logo-strip-wrap" aria-label="Client logos">
+      <div class="logo-strip" aria-hidden="true">
+      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/darkvision.png" alt="DarkVision" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/darkvision.png" alt="DarkVision" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
+      </div>
     </div>
 
     <div class="testimonial-block">
@@ -734,8 +845,8 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <script>document.write(new Date().getFullYear())</script> Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
-      <span>Web design by <a href="https://tredgolddigital.com/" target="_blank" rel="noopener">Tredgold Digital</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span>Web Design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -744,7 +855,7 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('section > .container > *, .service-row, .step, .market-item, .client-logo').forEach(el => {
+  document.querySelectorAll('section > .container > *, .service-row, .step, .market-item').forEach(el => {
     el.classList.add('reveal');
     io.observe(el);
   });

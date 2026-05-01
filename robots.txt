@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/
+Disallow: /admin/
+
+Sitemap: https://www.penleighinternational.com/sitemap.xml

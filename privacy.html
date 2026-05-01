@@ -34,15 +34,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0a0d10;
-    --paper: #f4f1ea;
-    --paper-warm: #ebe6db;
-    --navy: #11264a;
-    --navy-deep: #0a1830;
-    --steel: #5b6573;
-    --rule: #1a2030;
-    --amber: #d4823a;
-    --amber-soft: #e9a96a;
+    --ink: #0e1186;           /* brand blue — replaces black */
+    --paper: #ffffff;         /* clean white */
+    --paper-warm: #f0f2ff;   /* very light blue tint — replaces cream */
+    --navy: #1d2590;          /* brand blue mid */
+    --navy-deep: #0e1186;     /* brand blue deep */
+    --steel: #6b7280;         /* neutral grey for body text */
+    --rule: #1d2590;
+    --amber: #4f5de0;         /* light blue accent — replaces amber */
+    --amber-soft: #8b96f0;
     --serif: 'Fraunces', 'Georgia', serif;
     --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
@@ -73,7 +73,7 @@
   }
   nav.top .row { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 28px; width: auto; }
+  .nav-logo img { height: 28px; width: auto; filter: brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(1200%) hue-rotate(220deg) brightness(85%); }
   .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
   .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; }
@@ -346,7 +346,7 @@
 <nav class="top">
   <div class="container row">
     <a href="/" class="nav-logo">
-      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
+      <img src="/assets/logo-long-white.webp" alt="Penleigh International" />
     </a>
     <div class="nav-links">
       <a href="/about">About</a>
@@ -594,7 +594,7 @@
     </div>
     <div class="footer-bottom">
       <span>© <script>document.write(new Date().getFullYear())</script> Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
-      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+      <span>Web Design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
     </div>
   </div>
 </footer>

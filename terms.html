@@ -66,19 +66,19 @@
   nav.top {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     padding: 18px 0;
-    background: #ffffff;
+    background: var(--ink);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(10, 13, 16, 0.08);
   }
   nav.top .row { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 28px; width: auto; filter: brightness(0) saturate(100%) invert(16%) sepia(95%) saturate(1200%) hue-rotate(220deg) brightness(85%); }
+  .nav-logo img { height: 28px; width: auto; }
   .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
-  .nav-links a { color: var(--ink); opacity: 0.7; transition: opacity 0.2s; }
+  .nav-links a { color: var(--paper); opacity: 0.7; transition: opacity 0.2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; }
   .nav-cta {
-    border: 1px solid var(--ink);
+    border: 1px solid var(--paper);
     padding: 9px 20px;
     border-radius: 999px;
     font-weight: 500;
@@ -305,14 +305,14 @@
 <nav class="top">
   <div class="container row">
     <a href="/" class="nav-logo">
-      <img src="/assets/logo-long-white.webp" alt="Penleigh International" />
+      <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
     </a>
     <div class="nav-links">
-      <a href="/about">About</a>
-      <a href="/retained-search">Services</a>
-      <a href="/#process">Process</a>
+      <a href="/about.html">About</a>
+      <a href="/retained-search.html">Services</a>
+      <a href="/#process.html">Process</a>
       <a href="/#markets">Markets</a>
-      <a href="/contact" class="nav-cta">Start a search →</a>
+      <a href="/contact.html" class="nav-cta">Start a search →</a>
     </div>
   </div>
 </nav>

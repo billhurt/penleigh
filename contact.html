@@ -441,7 +441,7 @@
       <span style="color: var(--paper);">Contact</span>
     </div>
     <h1>Let&rsquo;s <em>start the conversation.</em></h1>
-    <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. We respond within a working day.</p>
+    <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. We'll respond within a working day.</p>
   </div>
 </section>
 
@@ -456,7 +456,7 @@
 
         <form id="contact-form"
               name="contact"
-              action="/contact.html"
+              action="/"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field">
@@ -560,7 +560,7 @@
     <div class="faq-list">
       <div class="faq-item">
         <h4>How quickly will I hear back?</h4>
-        <p>We respond usually within a working day. If you&rsquo;ve flagged something time-sensitive in your message, sooner.</p>
+        <p>We respond within a working day. If you&rsquo;ve flagged something time-sensitive in your message, sooner.</p>
       </div>
       <div class="faq-item">
         <h4>Do I need to commit to anything to start a conversation?</h4>
@@ -617,7 +617,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
-      <span>Web Design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
+      <span><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></span>
     </div>
   </div>
 </footer>
@@ -647,7 +647,7 @@
     const body = new URLSearchParams(formData).toString();
 
     try {
-      const response = await fetch(window.location.pathname, {
+      const response = await fetch("/", {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body

@@ -86,8 +86,41 @@
     transition: all 0.2s;
   }
   .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  .nav-hamburger { display: none; }
   @media (max-width: 720px) {
-    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-links { display: none; }
+    .nav-hamburger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--paper); border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile-menu {
+      display: none; flex-direction: column;
+      position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 24px 24px;
+    }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a {
+      color: var(--paper); opacity: 0.7; padding: 14px 0;
+      font-size: 15px; font-weight: 400; text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: opacity 0.2s;
+    }
+    .nav-mobile-menu a:last-child { border-bottom: none; margin-top: 8px; }
+    .nav-mobile-menu a:hover { opacity: 1; }
+    .nav-mobile-menu .nav-cta {
+      display: block; text-align: center; opacity: 1;
+      border: 1px solid var(--paper); border-radius: 999px;
+      padding: 12px 20px; font-weight: 500;
+    }
   }
 
   /* HERO */
@@ -533,10 +566,22 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#markets">Markets</a>
+      <a href="#clients">Clients</a>
       <a href="contact.html" class="nav-cta">Start a search →</a>
     </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" aria-hidden="true">
+  <a href="about.html">About</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#markets">Markets</a>
+  <a href="#clients">Clients</a>
+  <a href="contact.html" class="nav-cta">Start a search →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
@@ -859,6 +904,24 @@
   </div>
 </footer>
 
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.querySelector('.nav-mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+    });
+  });
+</script>
 <script>
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });

@@ -107,6 +107,7 @@
       background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
       padding: 8px 24px 48px;
       overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
     .nav-mobile-menu.open { display: flex; }
     .nav-mobile-menu a {
@@ -121,7 +122,7 @@
       display: block; text-align: center; opacity: 1;
       border: 1px solid var(--paper); border-radius: 999px;
       padding: 12px 20px; font-weight: 500;
-      margin-bottom: 4px;
+      margin-bottom: 12px;  /* pushes border clear of any overflow edge */
     }
   }
 

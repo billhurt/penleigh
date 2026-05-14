@@ -86,8 +86,41 @@
     transition: all 0.2s;
   }
   .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  .nav-hamburger { display: none; }
   @media (max-width: 720px) {
-    .nav-links a:not(.nav-cta) { display: none; }
+    .nav-links { display: none; }
+    .nav-hamburger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: var(--paper); border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .nav-mobile-menu {
+      display: none; flex-direction: column;
+      position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
+      background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 24px 24px;
+    }
+    .nav-mobile-menu.open { display: flex; }
+    .nav-mobile-menu a {
+      color: var(--paper); opacity: 0.7; padding: 14px 0;
+      font-size: 15px; font-weight: 400; text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: opacity 0.2s;
+    }
+    .nav-mobile-menu a:last-child { border-bottom: none; margin-top: 8px; }
+    .nav-mobile-menu a:hover { opacity: 1; }
+    .nav-mobile-menu .nav-cta {
+      display: block; text-align: center; opacity: 1;
+      border: 1px solid var(--paper); border-radius: 999px;
+      padding: 12px 20px; font-weight: 500;
+    }
   }
   /* PAGE HERO — portrait-led */
   .page-hero {
@@ -413,6 +446,32 @@
 
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* COOKIE BANNER */
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+    background: var(--ink); color: var(--paper);
+    padding: 16px 32px; display: flex; align-items: center;
+    justify-content: space-between; gap: 24px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-size: 14px; line-height: 1.5;
+  }
+  .cookie-banner.hidden { display: none; }
+  .cookie-banner p { max-width: 60ch; }
+  .cookie-banner a { text-decoration: underline; opacity: 0.8; }
+  .cookie-banner a:hover { opacity: 1; }
+  .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
+  .cookie-btn {
+    padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+  }
+  .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
+  .cookie-btn-accept:hover { opacity: 0.9; }
+  .cookie-btn-decline { background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.35); }
+  .cookie-btn-decline:hover { border-color: var(--paper); }
+  @media (max-width: 720px) {
+    .cookie-banner { flex-direction: column; align-items: flex-start; padding: 20px; gap: 16px; }
+  }
 </style>
 </head>
 <body>
@@ -427,10 +486,22 @@
       <a href="retained-search.html">Services</a>
       <a href="index.html#process">Process</a>
       <a href="index.html#markets">Markets</a>
+      <a href="index.html#clients">Clients</a>
       <a href="contact.html" class="nav-cta">Start a search →</a>
     </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-mobile-menu" aria-hidden="true">
+  <a href="about.html">About</a>
+  <a href="retained-search.html">Services</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#markets">Markets</a>
+  <a href="index.html#clients">Clients</a>
+  <a href="contact.html" class="nav-cta">Start a search →</a>
+</div>
 
 <section class="page-hero">
   <div class="container">
@@ -616,5 +687,46 @@
   });
 </script>
 
+<script>
+  const hamburger = document.querySelector('.nav-hamburger');
+  const mobileMenu = document.querySelector('.nav-mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+    mobileMenu.setAttribute('aria-hidden', !open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileMenu.setAttribute('aria-hidden', true);
+    });
+  });
+</script>
+<script>
+  (function() {
+    const KEY = 'pi_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+    const stored = localStorage.getItem(KEY);
+    function loadGtag() {
+      var s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S7HWTWMBGB';
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
+      gtag('js', new Date()); gtag('config', 'G-S7HWTWMBGB');
+    }
+    if (stored === 'accepted') { loadGtag(); banner.classList.add('hidden'); }
+    else if (stored === 'declined') { banner.classList.add('hidden'); }
+    document.getElementById('cookie-accept').addEventListener('click', function() {
+      localStorage.setItem(KEY, 'accepted'); banner.classList.add('hidden'); loadGtag();
+    });
+    document.getElementById('cookie-decline').addEventListener('click', function() {
+      localStorage.setItem(KEY, 'declined'); banner.classList.add('hidden');
+    });
+  })();
+</script>
 </body>
 </html>

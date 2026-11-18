@@ -30,9 +30,7 @@
 <meta name="twitter:description" content="Have a proper conversation. Drop a note or pick up the phone — we respond within a working day.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
 <script src="/assets/site.js" defer></script>
 <style>
@@ -283,14 +281,6 @@ form { display: grid; gap: 24px; }
   </div>
 </div>
 <script>
-const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('section > .container > *, .faq-item').forEach(el => {
-    el.classList.add('reveal');
-    io.observe(el);
-  });
-
   document.getElementById('contact-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;

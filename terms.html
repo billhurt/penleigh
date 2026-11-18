@@ -12,7 +12,7 @@
 <link rel="icon" href="/assets/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0a0d10">
+<meta name="theme-color" content="#0a2a5c">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -31,348 +31,60 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/site.js" defer></script>
 <style>
-  :root {
-    --ink: #0e1186;           /* brand blue — replaces black */
-    --paper: #ffffff;         /* clean white */
-    --paper-warm: #f0f2ff;   /* very light blue tint — replaces cream */
-    --navy: #1d2590;          /* brand blue mid */
-    --navy-deep: #0e1186;     /* brand blue deep */
-    --steel: #6b7280;         /* neutral grey for body text */
-    --rule: #1d2590;
-    --amber: #4f5de0;         /* light blue accent — replaces amber */
-    --amber-soft: #8b96f0;
-    --serif: 'Fraunces', 'Georgia', serif;
-    --sans: 'Geist', system-ui, -apple-system, sans-serif;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--sans);
-    color: var(--ink);
-    background: var(--paper);
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-  }
-  a { color: inherit; text-decoration: none; }
-  img { max-width: 100%; display: block; }
-  .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-  @media (max-width: 720px) { .container { padding: 0 20px; } }
-
-  /* NAV */
-  nav.top {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 18px 0;
-    background: var(--ink);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(10, 13, 16, 0.08);
-  }
-  nav.top .row { display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 28px; width: auto; }
-  .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
-  .nav-links a { color: var(--paper); opacity: 0.7; transition: opacity 0.2s; }
-  .nav-links a:hover, .nav-links a.active { opacity: 1; }
-  .nav-cta {
-    border: 1px solid var(--paper);
-    padding: 9px 20px;
-    border-radius: 999px;
-    font-weight: 500;
-    transition: all 0.2s;
-  }
-  .nav-cta:hover { background: var(--ink); color: var(--paper); }
-  .nav-hamburger { display: none; }
-  @media (max-width: 720px) {
-    .nav-links { display: none; }
-    .nav-hamburger {
-      display: flex; flex-direction: column; justify-content: center; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 4px;
-    }
-    .nav-hamburger span {
-      display: block; width: 22px; height: 2px;
-      background: var(--paper); border-radius: 2px;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
-    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    .nav-mobile-menu {
-      display: none; flex-direction: column;
-      position: fixed; top: 65px; left: 0; right: 0; z-index: 99;
-      background: var(--ink); border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 24px 24px;
-    }
-    .nav-mobile-menu.open { display: flex; }
-    .nav-mobile-menu a {
-      color: var(--paper); opacity: 0.7; padding: 14px 0;
-      font-size: 15px; font-weight: 400; text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      transition: opacity 0.2s;
-    }
-    .nav-mobile-menu a:last-child { border-bottom: none; margin-top: 8px; }
-    .nav-mobile-menu a:hover { opacity: 1; }
-    .nav-mobile-menu .nav-cta {
-      display: block; text-align: center; opacity: 1;
-      border: none;
-      padding: 12px 20px; font-weight: 500;
-    }
-  }
-
-  .page-hero {
-    background: var(--paper-warm);
-    color: var(--ink);
-    padding: 160px 0 60px;
-    border-bottom: 1px solid rgba(10,13,16,0.08);
-  }
-  .breadcrumb {
-    font-size: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--steel);
-    margin-bottom: 28px;
-    display: flex;
-    gap: 12px;
-    align-items: center;
-  }
-  .breadcrumb a:hover { color: var(--ink); }
-  .breadcrumb .sep { color: var(--amber); }
-  .page-hero h1 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(36px, 4.5vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    margin-bottom: 20px;
-    font-variation-settings: "opsz" 144;
-  }
-  .page-hero h1 em { font-style: italic; color: var(--navy); }
-  .page-hero .meta {
-    font-size: 14px;
-    color: var(--steel);
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .page-hero .meta span { display: inline-flex; align-items: center; gap: 8px; }
-  .page-hero .meta .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--amber); }
-
-  .doc { padding: 80px 0 120px; }
-  .doc-grid {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-  @media (max-width: 960px) {
-    .doc-grid { grid-template-columns: 1fr; gap: 32px; }
-  }
-
-  .toc {
-    position: sticky;
-    top: 100px;
-    align-self: start;
-  }
-  @media (max-width: 960px) {
-    .toc { position: static; padding: 24px; background: var(--paper-warm); border-radius: 4px; }
-  }
-  .toc h6 {
-    font-family: var(--sans);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--steel);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .toc h6 .num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 14px;
-    color: var(--amber);
-  }
-  .toc ol { list-style: none; counter-reset: section; }
-  .toc li {
-    counter-increment: section;
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-  .toc a {
-    display: flex;
-    gap: 12px;
-    padding: 6px 0;
-    font-size: 13.5px;
-    color: var(--steel);
-    transition: color 0.2s;
-    align-items: baseline;
-  }
-  .toc a::before {
-    content: counter(section, decimal-leading-zero);
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 12px;
-    color: var(--amber);
-    flex-shrink: 0;
-  }
-  .toc a:hover, .toc a.active { color: var(--ink); }
-
-  .doc-body { max-width: 68ch; }
-  .doc-body section { padding: 0; margin-bottom: 56px; scroll-margin-top: 100px; }
-  .doc-body h2 {
-    font-family: var(--serif);
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 1.15;
-    letter-spacing: -0.015em;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(10,13,16,0.15);
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-  }
-  .doc-body h2 .num {
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: 18px;
-    color: var(--amber);
-  }
-  .doc-body h3 {
-    font-family: var(--serif);
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 28px;
-    margin-bottom: 14px;
-    letter-spacing: -0.01em;
-  }
-  .doc-body p {
-    color: #2a3038;
-    font-size: 16px;
-    line-height: 1.7;
-    margin-bottom: 16px;
-  }
-  .doc-body p strong { color: var(--ink); font-weight: 500; }
-  .doc-body ul {
-    list-style: none;
-    margin: 16px 0 24px;
-  }
-  .doc-body ul li {
-    color: #2a3038;
-    font-size: 16px;
-    line-height: 1.65;
-    padding-left: 24px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-  .doc-body ul li::before {
-    content: '';
-    position: absolute;
-    left: 0; top: 12px;
-    width: 12px; height: 1px;
-    background: var(--amber);
-  }
-  .doc-body a {
-    color: var(--navy);
-    border-bottom: 1px solid rgba(17,38,74,0.4);
-    padding-bottom: 1px;
-    transition: border-color 0.2s;
-  }
-  .doc-body a:hover { border-color: var(--navy); }
-
-  .doc-aside {
-    background: var(--paper-warm);
-    border-left: 2px solid var(--amber);
-    padding: 20px 24px;
-    margin: 24px 0;
-    border-radius: 0 4px 4px 0;
-  }
-  .doc-aside p { font-size: 14.5px; line-height: 1.65; color: var(--steel); margin-bottom: 0; }
-  .doc-aside p strong { color: var(--ink); }
-
-  .doc-end {
-    margin-top: 72px;
-    padding-top: 32px;
-    border-top: 1px solid rgba(10,13,16,0.15);
-  }
-  .doc-end p { color: var(--steel); margin-bottom: 8px; }
-  .doc-end a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    font-weight: 500;
-    color: var(--ink);
-    border-bottom: 1px solid var(--ink);
-    padding-bottom: 2px;
-  }
-
-  /* FOOTER */
-  footer { background: var(--ink); color: rgba(244,241,234,0.6); padding: 80px 0 40px; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
-  @media (max-width: 720px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
-  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
-  .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
-  .footer-col h6 {
-    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--paper); margin-bottom: 20px; font-weight: 500;
-  }
-  .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 12px; font-size: 14px; }
-  .footer-col a:hover { color: var(--paper); }
-  .footer-bottom {
-    border-top: 1px solid rgba(244,241,234,0.1);
-    padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap;
-    gap: 16px; font-size: 12px; color: rgba(244,241,234,0.4);
-  }
-
-  /* COOKIE BANNER */
-  .cookie-banner {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
-    background: var(--ink); color: var(--paper);
-    padding: 16px 32px; display: flex; align-items: center;
-    justify-content: space-between; gap: 24px;
-    border-top: 1px solid rgba(255,255,255,0.15);
-    font-size: 14px; line-height: 1.5;
-  }
-  .cookie-banner.hidden { display: none; }
-  .cookie-banner p { max-width: 60ch; }
-  .cookie-banner a { text-decoration: underline; opacity: 0.8; }
-  .cookie-banner a:hover { opacity: 1; }
-  .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
-  .cookie-btn {
-    padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
-  }
-  .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
-  .cookie-btn-accept:hover { opacity: 0.9; }
-  .cookie-btn-decline { background: transparent; color: var(--paper); border: 1px solid rgba(255,255,255,0.35); }
-  .cookie-btn-decline:hover { border-color: var(--paper); }
-  @media (max-width: 720px) {
-    .cookie-banner { flex-direction: column; align-items: flex-start; padding: 20px; gap: 16px; }
-  }
+.page-hero .meta { display: flex; gap: 24px; flex-wrap: wrap; font-size: 14px; color: var(--brand-light); }
+.page-hero .meta .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--brand-light); margin-right: 8px; vertical-align: middle; }
+.doc { padding: 80px 0 112px; }
+.doc-grid { display: grid; grid-template-columns: 240px 1fr; gap: 72px; align-items: start; }
+@media (max-width: 960px) { .doc-grid { grid-template-columns: 1fr; gap: 40px; } }
+.toc { position: sticky; top: calc(var(--nav-h) + 32px); }
+@media (max-width: 960px) { .toc { position: static; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; } }
+.toc h6 { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.toc h6 .num { display: none; }
+.toc ol { list-style: none; counter-reset: t; }
+.toc li { counter-increment: t; }
+.toc a { display: block; padding: 6px 0 6px 12px; border-left: 2px solid var(--line); font-size: 14px; color: var(--body); transition: color 0.2s, border-color 0.2s; }
+.toc a::before { content: counter(t, decimal-leading-zero) '  '; color: var(--muted); font-size: 12px; }
+.toc a:hover, .toc a.active { color: var(--brand); border-left-color: var(--brand); }
+.doc-body { max-width: 72ch; min-width: 0; }
+.doc-body > p { font-size: 17px; margin-bottom: 28px; }
+.doc-body section { margin-bottom: 48px; padding: 0; }
+.doc-body h2 { font-size: 24px; margin-bottom: 16px; display: flex; gap: 12px; align-items: baseline; }
+.doc-body h2 .num { font-size: 14px; color: var(--brand); font-weight: 600; }
+.doc-body h3 { font-size: 18px; margin: 24px 0 10px; }
+.doc-body p, .doc-body li { font-size: 16px; }
+.doc-body p { margin-bottom: 14px; }
+.doc-body ul, .doc-body ol { margin: 0 0 16px 22px; }
+.doc-body li { margin-bottom: 8px; }
+.doc-body a { color: var(--brand); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
+.doc-body strong { color: var(--text); font-weight: 600; }
+.doc-aside { background: var(--brand-tint); border-left: 4px solid var(--brand); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 40px; }
+.doc-aside p { margin: 0; color: var(--text); }
+.doc-defs { display: grid; grid-template-columns: 130px 1fr; gap: 8px 20px; padding: 18px 20px; margin: 0 0 16px; background: var(--bg-alt); border: 1px solid var(--line); border-radius: var(--radius); font-size: 15px; }
+.doc-defs dt { font-weight: 600; color: var(--text); }
+@media (max-width: 600px) { .doc-defs { grid-template-columns: 1fr; gap: 2px; } .doc-defs dd { margin-bottom: 10px; } }
+.doc-end { margin-top: 56px; padding: 28px 32px; background: var(--brand-deep); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+.doc-end p { color: #fff; margin: 0; font-weight: 500; }
+.doc-end a { color: #fff; font-weight: 600; text-decoration: none; }
 </style>
 </head>
 <body>
 
 <nav class="top">
   <div class="container row">
-    <a href="/" class="nav-logo">
-      <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+    <a href="index.html" class="nav-logo">
+      <img src="/assets/logo-long-dark.webp" alt="Penleigh International" />
     </a>
     <div class="nav-links">
-      <a href="/about.html">About</a>
-      <a href="/retained-search.html">Services</a>
-      <a href="/#process">Process</a>
-      <a href="/#markets">Markets</a>
-      <a href="/#clients">Clients</a>
-      <a href="/contact.html" class="nav-cta">Start a search →</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#markets">Markets</a>
+      <a href="index.html#clients">Clients</a>
+      <a href="contact.html" class="nav-cta">Start a search</a>
     </div>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -380,22 +92,22 @@
   </div>
 </nav>
 <div class="nav-mobile-menu" aria-hidden="true">
-  <a href="/about.html">About</a>
-  <a href="/retained-search.html">Services</a>
-  <a href="/#process">Process</a>
-  <a href="/#markets">Markets</a>
-  <a href="/#clients">Clients</a>
-  <a href="/contact.html" class="nav-cta">Start a search →</a>
+  <a href="about.html">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#process">Process</a>
+  <a href="index.html#markets">Markets</a>
+  <a href="index.html#clients">Clients</a>
+  <a href="contact.html" class="nav-cta">Start a search</a>
 </div>
 
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="/">Home</a>
+      <a href="index.html">Home</a>
       <span class="sep">/</span>
-      <span style="color: var(--ink);">Terms of Use</span>
+      <span class="current">Terms of Use</span>
     </div>
-    <h1>Terms of <em>Use</em></h1>
+    <h1>Terms of Use</h1>
     <div class="meta">
       <span><span class="dot"></span>Last updated: 29 April 2026</span>
       <span><span class="dot"></span>Version 1.0</span>
@@ -425,10 +137,10 @@
 
       <article class="doc-body">
 
-        <p style="font-size: 17px; line-height: 1.65; color: var(--steel); margin-bottom: 32px;">These terms govern your use of the Penleigh International website at <strong>penleighinternational.com</strong>. By using the site you agree to them. If you don&rsquo;t, please stop using the site.</p>
+        <p>These terms govern your use of the Penleigh International website at <strong>penleighinternational.com</strong>. By using the site you agree to them. If you don&rsquo;t, please stop using the site.</p>
 
         <div class="doc-aside">
-          <p><strong>These terms cover the website only.</strong> Separate commercial terms apply to retained search engagements and market mapping projects. Those are issued in writing at the start of an engagement and supersede anything on this page in relation to the work itself. If you&rsquo;d like a copy of our standard engagement terms, please <a href="/contact" style="color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 1px;">get in touch</a>.</p>
+          <p><strong>These terms cover the website only.</strong> Separate commercial terms apply to retained search engagements and market mapping projects. Those are issued in writing at the start of an engagement and supersede anything on this page in relation to the work itself. If you&rsquo;d like a copy of our standard engagement terms, please <a href="contact.html" style="color: var(--text); border-bottom: 1px solid var(--text); padding-bottom: 1px;">get in touch</a>.</p>
         </div>
 
         <section id="scope">
@@ -531,7 +243,7 @@
 
         <div class="doc-end">
           <p>For our commercial engagement terms, get in touch.</p>
-          <a href="/contact">Contact us <span>→</span></a>
+          <a href="contact.html">Contact us <span>→</span></a>
         </div>
 
       </article>
@@ -549,17 +261,18 @@
       <div class="footer-col">
         <h6>Services</h6>
         <ul>
-          <li><a href="/retained-search">Retained Search</a></li>
-          <li><a href="/market-mapping">Market Mapping</a></li>
+          <li><a href="retained-search.html">Retained Search</a></li>
+          <li><a href="market-mapping.html">Market Mapping</a></li>
           <li><a href="https://penleigh.hireinsight.io/" target="_blank" rel="noopener">HireInsight</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h6>Company</h6>
         <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/#markets">Markets</a></li>
-          <li><a href="/#clients">Clients</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#markets">Markets</a></li>
+          <li><a href="index.html#clients">Clients</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -567,19 +280,27 @@
         <ul>
           <li><a href="mailto:enquiries@penleighinternational.com">enquiries@penleighinternational.com</a></li>
           <li><a href="tel:+441133204980">+44 (0)113 320 4980</a></li>
+          <li>32 Park Cross Street, Leeds, LS1 2QH</li>
           <li><a href="https://uk.linkedin.com/company/penleighinternational" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <script>document.write(new Date().getFullYear())</script> Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
-      <span>Web Design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
+      <span>© 2026 Penleigh International Ltd · Registered in England &amp; Wales No. 12442642</span>
+      <span>Web design by <a href="https://tredgolddigital.com/">Tredgold Digital</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span>
     </div>
   </div>
 </footer>
 
+<div id="cookie-banner" class="cookie-banner" role="alertdialog" aria-label="Cookie consent">
+  <p>We use analytics cookies to understand how visitors use our site. You can accept or decline below. <a href="/privacy.html">Privacy policy</a></p>
+  <div class="cookie-actions">
+    <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+  </div>
+</div>
 <script>
-  const sections = document.querySelectorAll('.doc-body section[id]');
+const sections = document.querySelectorAll('.doc-body section[id]');
   const tocLinks = document.querySelectorAll('.toc a');
   const linkMap = {};
   tocLinks.forEach(l => { linkMap[l.getAttribute('href').slice(1)] = l; });
@@ -593,48 +314,6 @@
     });
   }, { rootMargin: '-100px 0px -60% 0px', threshold: 0 });
   sections.forEach(s => obs.observe(s));
-</script>
-
-<script>
-  const hamburger = document.querySelector('.nav-hamburger');
-  const mobileMenu = document.querySelector('.nav-mobile-menu');
-  hamburger.addEventListener('click', () => {
-    const open = mobileMenu.classList.toggle('open');
-    hamburger.classList.toggle('open', open);
-    hamburger.setAttribute('aria-expanded', open);
-    mobileMenu.setAttribute('aria-hidden', !open);
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-      mobileMenu.setAttribute('aria-hidden', true);
-    });
-  });
-</script>
-<script>
-  (function() {
-    const KEY = 'pi_cookie_consent';
-    const banner = document.getElementById('cookie-banner');
-    const stored = localStorage.getItem(KEY);
-    function loadGtag() {
-      var s = document.createElement('script');
-      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S7HWTWMBGB';
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
-      gtag('js', new Date()); gtag('config', 'G-S7HWTWMBGB');
-    }
-    if (stored === 'accepted') { loadGtag(); banner.classList.add('hidden'); }
-    else if (stored === 'declined') { banner.classList.add('hidden'); }
-    document.getElementById('cookie-accept').addEventListener('click', function() {
-      localStorage.setItem(KEY, 'accepted'); banner.classList.add('hidden'); loadGtag();
-    });
-    document.getElementById('cookie-decline').addEventListener('click', function() {
-      localStorage.setItem(KEY, 'declined'); banner.classList.add('hidden');
-    });
-  })();
 </script>
 </body>
 </html>

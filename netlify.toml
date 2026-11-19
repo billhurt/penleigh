@@ -75,8 +75,8 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
-# Aggressive caching for static assets (favicon, OG image, fonts won't change often)
+# One-week cache with revalidation, so replaced assets (e.g. logos) reach returning visitors
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=604800, must-revalidate"

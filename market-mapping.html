@@ -29,10 +29,14 @@
 <meta name="twitter:title" content="Market Mapping · Penleigh International">
 <meta name="twitter:description" content="Talent intelligence, before you need it. Confidential market mapping for founders, boards and PE investors planning a hire, restructure, or transaction.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bitter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
+  button, input, select, textarea { font-family: inherit; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .nobr { white-space: nowrap; }
   :root {
     --ink: #0e1186;           /* brand blue — replaces black */
     --paper: #ffffff;         /* clean white */
@@ -43,13 +47,11 @@
     --rule: #1d2590;
     --amber: #4f5de0;         /* light blue accent — replaces amber */
     --amber-soft: #8b96f0;
-    --serif: 'Fraunces', 'Georgia', serif;
-    --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     color: var(--ink);
     background: var(--paper);
     font-size: 16px;
@@ -149,18 +151,18 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    font-weight: 600;
   }
   .breadcrumb a:hover { color: var(--ink); }
   .breadcrumb .sep { color: var(--amber); }
   .page-hero h1 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(44px, 6vw, 84px);
-    line-height: 1.02;
-    letter-spacing: -0.025em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(38.3px, 5.2vw, 73.1px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
     margin-bottom: 36px;
     max-width: 18ch;
-    font-variation-settings: "opsz" 144;
   }
   .page-hero h1 em { font-style: italic; color: var(--navy); }
   .page-hero .lede {
@@ -174,9 +176,9 @@
   @media (max-width: 720px) { section { padding: 72px 0; } }
 
   .section-eyebrow {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--steel);
@@ -186,25 +188,26 @@
     gap: 12px;
   }
   .section-eyebrow .num {
-    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+    font-family: var(--font-heading); font-style: italic; font-size: 14px; color: var(--amber);
+    font-weight: 600;
   }
   .section-title {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(32px, 4.2vw, 56px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(29.4px, 3.9vw, 51.5px);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin-bottom: 40px;
     max-width: 22ch;
   }
   .section-title em { font-style: italic; color: var(--navy); }
 
   .lead-text {
-    font-family: var(--serif);
-    font-size: clamp(22px, 2.4vw, 30px);
+    font-family: var(--font-heading);
+    font-size: clamp(20.2px, 2.2vw, 27.6px);
     line-height: 1.35;
-    font-weight: 350;
-    letter-spacing: -0.01em;
+    font-weight: 600;
+    letter-spacing: -0.006em;
     margin-bottom: 32px;
     max-width: 32ch;
   }
@@ -236,13 +239,14 @@
     color: var(--amber);
     margin-bottom: 16px;
     display: block;
+    font-weight: 600;
   }
   .usecase h3 {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 26px;
     line-height: 1.15;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
     margin-bottom: 16px;
   }
   .usecase p {
@@ -281,19 +285,20 @@
   @media (max-width: 720px) { .deliv-grid { grid-template-columns: 1fr; gap: 40px; } }
   .deliv-item { padding-left: 0; }
   .deliv-item-num {
-    font-family: var(--serif);
+    font-family: var(--font-heading);
     font-style: italic;
     font-size: 14px;
     color: var(--amber-soft);
     margin-bottom: 8px;
+    font-weight: 600;
   }
   .deliv-item h4 {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.2;
     margin-bottom: 14px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
     padding-bottom: 14px;
     border-bottom: 1px solid rgba(244,241,234,0.15);
   }
@@ -339,14 +344,15 @@
     text-transform: uppercase;
     color: var(--steel);
     margin-bottom: 6px;
+    font-weight: 600;
   }
   .timeline-item h4 {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.2;
     margin-bottom: 10px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
   }
   .timeline-item p {
     color: var(--steel);
@@ -378,19 +384,20 @@
   }
   @media (max-width: 720px) { .conf-grid { grid-template-columns: 1fr; gap: 32px; } }
   .conf-mark {
-    font-family: var(--serif);
+    font-family: var(--font-heading);
     font-style: italic;
     font-size: 14px;
     color: var(--amber-soft);
     letter-spacing: 0.05em;
+    font-weight: 600;
   }
   .conf h3 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(26px, 3vw, 38px);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(23.9px, 2.8vw, 35px);
     line-height: 1.1;
     margin-top: 16px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.012em;
   }
   .conf h3 em { font-style: italic; color: var(--amber-soft); }
   .conf p {
@@ -427,11 +434,11 @@
     .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; }
   }
   .cta-card h2 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(30px, 3.5vw, 44px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(27.6px, 3.2vw, 40.5px);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     position: relative;
     z-index: 1;
   }
@@ -469,8 +476,8 @@
   .footer-brand img { height: 60px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
   .footer-col h6 {
-    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+    font-family: var(--font-body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 600;
   }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 12px; font-size: 14px; }
@@ -501,7 +508,7 @@
   .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
   .cookie-btn {
     padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+    cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
   }
   .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
   .cookie-btn-accept:hover { opacity: 0.9; }

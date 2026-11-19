@@ -29,10 +29,14 @@
 <meta name="twitter:description" content="The terms governing your use of the Penleigh International website.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bitter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
+  button, input, select, textarea { font-family: inherit; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .nobr { white-space: nowrap; }
   :root {
     --ink: #0e1186;           /* brand blue — replaces black */
     --paper: #ffffff;         /* clean white */
@@ -43,13 +47,11 @@
     --rule: #1d2590;
     --amber: #4f5de0;         /* light blue accent — replaces amber */
     --amber-soft: #8b96f0;
-    --serif: 'Fraunces', 'Georgia', serif;
-    --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     color: var(--ink);
     background: var(--paper);
     font-size: 16px;
@@ -137,17 +139,17 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    font-weight: 600;
   }
   .breadcrumb a:hover { color: var(--ink); }
   .breadcrumb .sep { color: var(--amber); }
   .page-hero h1 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(36px, 4.5vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(31.3px, 3.9vw, 52.2px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
     margin-bottom: 20px;
-    font-variation-settings: "opsz" 144;
   }
   .page-hero h1 em { font-style: italic; color: var(--navy); }
   .page-hero .meta {
@@ -180,9 +182,9 @@
     .toc { position: static; padding: 24px; background: var(--paper-warm); border-radius: 4px; }
   }
   .toc h6 {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--steel);
@@ -192,10 +194,11 @@
     gap: 12px;
   }
   .toc h6 .num {
-    font-family: var(--serif);
+    font-family: var(--font-heading);
     font-style: italic;
     font-size: 14px;
     color: var(--amber);
+    font-weight: 600;
   }
   .toc ol { list-style: none; counter-reset: section; }
   .toc li {
@@ -214,22 +217,23 @@
   }
   .toc a::before {
     content: counter(section, decimal-leading-zero);
-    font-family: var(--serif);
+    font-family: var(--font-heading);
     font-style: italic;
     font-size: 12px;
     color: var(--amber);
     flex-shrink: 0;
+    font-weight: 600;
   }
   .toc a:hover, .toc a.active { color: var(--ink); }
 
   .doc-body { max-width: 68ch; }
   .doc-body section { padding: 0; margin-bottom: 56px; scroll-margin-top: 100px; }
   .doc-body h2 {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 28px;
     line-height: 1.15;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.009em;
     margin-bottom: 24px;
     padding-bottom: 16px;
     border-bottom: 1px solid rgba(10,13,16,0.15);
@@ -238,19 +242,19 @@
     gap: 16px;
   }
   .doc-body h2 .num {
-    font-family: var(--serif);
+    font-family: var(--font-heading);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 600;
     font-size: 18px;
     color: var(--amber);
   }
   .doc-body h3 {
-    font-family: var(--serif);
-    font-weight: 500;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 18px;
     margin-top: 28px;
     margin-bottom: 14px;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
   }
   .doc-body p {
     color: #2a3038;
@@ -320,8 +324,8 @@
   .footer-brand img { height: 60px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
   .footer-col h6 {
-    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+    font-family: var(--font-body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 600;
   }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 12px; font-size: 14px; }
@@ -348,7 +352,7 @@
   .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
   .cookie-btn {
     padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+    cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
   }
   .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
   .cookie-btn-accept:hover { opacity: 0.9; }

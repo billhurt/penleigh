@@ -30,10 +30,14 @@
 <meta name="twitter:description" content="Hard-to-find people for hard-to-fill roles. Retained executive search for midstream and subsea, led at partner level.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bitter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
+  button, input, select, textarea { font-family: inherit; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .nobr { white-space: nowrap; }
   :root {
     --ink: #0e1186;           /* brand blue — replaces black */
     --paper: #ffffff;         /* clean white */
@@ -44,13 +48,11 @@
     --rule: #1d2590;
     --amber: #4f5de0;         /* light blue accent — replaces amber */
     --amber-soft: #8b96f0;
-    --serif: 'Fraunces', 'Georgia', serif;
-    --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     color: var(--ink);
     background: var(--paper);
     font-size: 16px;
@@ -158,7 +160,7 @@
     align-items: center;
     gap: 12px;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--amber-soft);
@@ -166,15 +168,14 @@
   }
   .eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--amber-soft); }
   .hero h1 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(42px, 6.2vw, 86px);
-    line-height: 1;
-    letter-spacing: -0.025em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(36.5px, 5.4vw, 74.8px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
     margin-bottom: 36px;
-    font-variation-settings: "opsz" 144;
   }
-  .hero h1 em { font-style: italic; color: var(--amber-soft); font-variation-settings: "opsz" 144, "SOFT" 50; }
+  .hero h1 em { font-style: italic; color: var(--amber-soft); }
   .hero p.lede { font-size: 18px; line-height: 1.55; max-width: 540px; color: rgba(244,241,234,0.72); margin-bottom: 48px; }
   .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
   .btn {
@@ -213,6 +214,7 @@
     animation: scroll 40s linear infinite;
     /* Will-change helps GPU compositing for smooth loop */
     will-change: transform;
+    font-weight: 600;
   }
   .strip-inner span {
     display: inline-flex;
@@ -227,14 +229,14 @@
   section { padding: 140px 0; }
   @media (max-width: 720px) { section { padding: 80px 0; } }
   .section-eyebrow {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
     color: var(--steel); margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
   }
-  .section-eyebrow .num { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber); }
+  .section-eyebrow .num { font-family: var(--font-heading); font-style: italic; font-size: 14px; color: var(--amber); font-weight: 600; }
   .section-title {
-    font-family: var(--serif); font-weight: 350;
-    font-size: clamp(34px, 4.5vw, 60px); line-height: 1.05;
-    letter-spacing: -0.02em; margin-bottom: 32px; max-width: 880px;
+    font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(31.3px, 4.1vw, 55.2px); line-height: 1.1;
+    letter-spacing: -0.012em; margin-bottom: 32px; max-width: 880px;
   }
   .section-title em { font-style: italic; color: var(--navy); }
 
@@ -242,7 +244,8 @@
   .about { background: var(--paper); }
   .about-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 80px; align-items: start; }
   @media (max-width: 960px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
-  .about-lede { font-family: var(--serif); font-size: 28px; line-height: 1.3; font-weight: 350; margin-bottom: 28px; letter-spacing: -0.01em; }
+  .about-lede { font-family: var(--font-heading); font-size: 28px; line-height: 1.3; font-weight: 600; margin-bottom: 28px; letter-spacing: -0.006em; }
+  @media (max-width: 720px) { .about-lede { font-size: 22px; line-height: 1.35; } }
   .about-lede em { color: var(--navy); font-style: italic; }
   .about-body p { color: var(--steel); margin-bottom: 18px; font-size: 16px; line-height: 1.65; max-width: 56ch; }
   .about-body p strong { color: var(--ink); font-weight: 500; }
@@ -262,7 +265,7 @@
   .image-panel { width: 100%; overflow: hidden; position: relative; height: 400px; }
   @media (max-width: 720px) { .image-panel { height: 220px; } }
   .image-panel img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; filter: brightness(0.82); /* per-image overrides via style attr */ }
-  .image-panel-caption { position: absolute; bottom: 20px; right: 28px; font-family: var(--serif); font-style: italic; font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.02em; }
+  .image-panel-caption { position: absolute; bottom: 20px; right: 28px; font-family: var(--font-heading); font-style: italic; font-size: 13px; color: rgba(255,255,255,0.65); letter-spacing: 0.02em; font-weight: 600; }
 
   /* SERVICES */
   .services { background: var(--paper); }
@@ -276,8 +279,8 @@
   .service-row:last-child { border-bottom: 1px solid rgba(10,13,16,0.15); }
   .service-row:hover { padding-left: 16px; }
   @media (max-width: 960px) { .service-row { grid-template-columns: 1fr; gap: 16px; padding: 40px 0; } .service-row:hover { padding-left: 0; } }
-  .service-num { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 22px; color: var(--amber); }
-  .service-name { font-family: var(--serif); font-weight: 350; font-size: 32px; line-height: 1.1; letter-spacing: -0.01em; }
+  .service-num { font-family: var(--font-heading); font-style: italic; font-weight: 600; font-size: 22px; color: var(--amber); }
+  .service-name { font-family: var(--font-heading); font-weight: 600; font-size: 29.4px; line-height: 1.1; letter-spacing: -0.006em; }
   .service-desc { color: var(--steel); font-size: 15.5px; line-height: 1.65; }
   .service-desc p { margin-bottom: 12px; }
   .service-desc a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-weight: 500; margin-top: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
@@ -296,14 +299,15 @@
   @media (max-width: 960px) { .steps { grid-template-columns: 1fr; gap: 24px; } .steps::before { display: none; } }
   .step { position: relative; z-index: 1; }
   .step-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--amber); margin-bottom: 20px; margin-top: 28px; box-shadow: 0 0 0 6px var(--ink); }
-  .step-num { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--amber-soft); margin-bottom: 8px; }
-  .step-title { font-family: var(--serif); font-weight: 400; font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
+  .step-num { font-family: var(--font-heading); font-style: italic; font-size: 13px; color: var(--amber-soft); margin-bottom: 8px; font-weight: 600; }
+  .step-title { font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 1.2; margin-bottom: 12px; }
   .step-desc { font-size: 14px; line-height: 1.55; color: rgba(244,241,234,0.6); }
   .step-highlight .step-dot { background: var(--paper); width: 18px; height: 18px; margin-top: 26px; }
   .step-highlight { background: rgba(244,241,234,0.04); padding: 20px 20px 28px; margin: -20px -20px 0; border-radius: 4px; border: 1px solid rgba(244,241,234,0.1); }
   .hire-insight-tag {
   display: inline-block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--paper); margin-top: 14px; padding: 4px 8px; border: 1px solid var(--amber); border-radius: 3px; transition: all 0.2s;
+    font-weight: 600;
   }
   .hire-insight-tag:hover { background: var(--amber); color: var(--ink); }
 
@@ -314,15 +318,16 @@
   @media (max-width: 960px) { .markets-grid { grid-template-columns: 1fr; gap: 40px; } }
   .markets-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(10,13,16,0.12); border: 1px solid rgba(10,13,16,0.12); }
   .market-item { background: var(--paper-warm); padding: 32px 28px; }
-  .market-item h4 { font-family: var(--serif); font-weight: 400; font-size: 22px; margin-bottom: 8px; }
+  .market-item h4 { font-family: var(--font-heading); font-weight: 600; font-size: 22px; margin-bottom: 8px; }
   .market-item p { font-size: 13.5px; line-height: 1.55; color: var(--steel); }
+  @media (max-width: 480px) { .market-item { padding: 24px 16px; } .market-item h4 { font-size: 18px; } }
   .market-item.future { background: transparent; border: 1px dashed rgba(10,13,16,0.25); }
   .market-item.future h4 { color: var(--steel); font-style: italic; }
-  .market-item.future::before { content: 'Coming soon'; display: block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+  .market-item.future::before { content: 'Coming soon'; display: block; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; font-weight: 600; }
   .roles-list { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(10,13,16,0.15); }
-  .roles-list h5 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--steel); margin-bottom: 16px; font-weight: 500; }
+  .roles-list h5 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--steel); margin-bottom: 16px; font-weight: 600; }
   .roles-list ul { list-style: none; columns: 2; column-gap: 32px; }
-  .roles-list li { font-family: var(--serif); font-size: 16px; line-height: 2; border-bottom: 1px solid rgba(10,13,16,0.1); padding-right: 12px; }
+  .roles-list li { font-family: var(--font-heading); font-size: 16px; line-height: 2; border-bottom: 1px solid rgba(10,13,16,0.1); padding-right: 12px; font-weight: 600; }
 
   /* CLIENTS */
   .clients { background: var(--paper); }
@@ -409,15 +414,16 @@
   @media (max-width: 720px) { .testimonial-block { padding: 52px 28px 48px; } }
   .testimonial-block .quote-mark {
     position: absolute; top: 24px; left: 40px;
-    font-family: var(--serif); font-size: 100px; line-height: 1;
+    font-family: var(--font-heading); font-size: 100px; line-height: 1;
     color: var(--amber); opacity: 0.6;
     z-index: 1;
+    font-weight: 600;
   }
   @media (max-width: 720px) { .testimonial-block .quote-mark { font-size: 64px; left: 24px; top: 16px; } }
   .testimonial-block blockquote {
-    font-family: var(--serif); font-weight: 350;
+    font-family: var(--font-heading); font-weight: 600;
     font-size: clamp(18px, 2.2vw, 28px); line-height: 1.4;
-    letter-spacing: -0.01em; max-width: 720px;
+    letter-spacing: -0.006em; max-width: 720px;
     margin: 0 auto; text-align: center; position: relative; z-index: 2;
   }
   .testimonial-block blockquote em { font-style: italic; color: var(--amber-soft); }
@@ -441,9 +447,9 @@
   @media (max-width: 960px) { .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; } }
   @media (max-width: 720px) { .cta-card { padding: 44px 28px; gap: 28px; } }
   .cta-card h2 {
-    font-family: var(--serif); font-weight: 350;
-    font-size: clamp(32px, 3.5vw, 48px); line-height: 1.05;
-    letter-spacing: -0.02em; position: relative; z-index: 1;
+    font-family: var(--font-heading); font-weight: 600;
+    font-size: clamp(29.4px, 3.2vw, 44.2px); line-height: 1.1;
+    letter-spacing: -0.012em; position: relative; z-index: 1;
   }
   .cta-card h2 em { color: var(--amber-soft); font-style: italic; }
   .cta-card-right { display: flex; flex-direction: column; gap: 20px; position: relative; z-index: 1; }
@@ -468,7 +474,7 @@
   @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
   .footer-brand img { height: 60px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
-  .footer-col h6 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper); margin-bottom: 20px; font-weight: 500; }
+  .footer-col h6 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper); margin-bottom: 20px; font-weight: 600; }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 12px; font-size: 14px; }
   .footer-col a:hover { color: var(--paper); }
@@ -499,7 +505,7 @@
   .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
   .cookie-btn {
     padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+    cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
   }
   .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
   .cookie-btn-accept:hover { opacity: 0.9; }
@@ -624,8 +630,8 @@
   <div class="container">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">Retained Search · Midstream &amp; Subsea</span>
-        <h1>Hard-to-find people for hard-to-fill roles in midstream &amp; subsea.</h1>
+        <span class="eyebrow">Retained Search · <span class="nobr">Midstream &amp; Subsea</span></span>
+        <h1><span class="nobr">Hard-to-find</span> people for <span class="nobr">hard-to-fill</span> roles in midstream &amp; subsea.</h1>
         <p class="lede">Penleigh International is a retained executive search firm working exclusively in midstream and subsea inspection. We recruit C-suite, senior management, sales and operations talent for our clients globally.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Start a search <span class="arrow">→</span></a>
@@ -676,7 +682,7 @@
         <h2 class="section-title">A specialist firm. Not a generalist.</h2>
       </div>
       <div>
-        <p class="about-lede">For over a decade we&rsquo;ve placed senior talent in the <em>midstream and subsea inspection markets</em> — the niche corners of energy where the right person is rarely on the market, and the wrong hire is genuinely expensive.</p>
+        <p class="about-lede">For over a decade we&rsquo;ve placed senior talent in the <em>midstream and subsea inspection markets</em> — the niche corners of energy where the right person is rarely on the market, and the wrong hire is <span class="nobr">genuinely expensive.</span></p>
         <div class="about-body">
           <p>We work on a retained basis only. That means we&rsquo;re partners — not a CV-blasting agency. Every search is led at partner level, with no junior handover, no off-the-shelf longlists, and no incentive to fill roles quickly at the cost of fit.</p>
           <p>Our network spans <strong>6,000+ contacts across 21 countries</strong>, built up role-by-role in pipeline services, subsea inspection, pipeline construction, NDT and adjacent fields. When you&rsquo;re hiring for a role that genuinely matters, that depth of network is the difference.</p>

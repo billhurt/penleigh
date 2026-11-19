@@ -29,10 +29,14 @@
 <meta name="twitter:title" content="Contact · Penleigh International">
 <meta name="twitter:description" content="Have a proper conversation. Drop a note or pick up the phone — we respond within a working day.">
 <meta name="twitter:image" content="https://www.penleighinternational.com/assets/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bitter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
 <style>
+  button, input, select, textarea { font-family: inherit; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  .nobr { white-space: nowrap; }
   :root {
     --ink: #0e1186;           /* brand blue — replaces black */
     --paper: #ffffff;         /* clean white */
@@ -43,13 +47,11 @@
     --rule: #1d2590;
     --amber: #4f5de0;         /* light blue accent — replaces amber */
     --amber-soft: #8b96f0;
-    --serif: 'Fraunces', 'Georgia', serif;
-    --sans: 'Geist', system-ui, -apple-system, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     color: var(--ink);
     background: var(--paper);
     font-size: 16px;
@@ -149,18 +151,18 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    font-weight: 600;
   }
   .breadcrumb a:hover { color: var(--paper); }
   .breadcrumb .sep { color: var(--amber-soft); }
   .page-hero h1 {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(44px, 6vw, 84px);
-    line-height: 1.02;
-    letter-spacing: -0.025em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(38.3px, 5.2vw, 73.1px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
     margin-bottom: 36px;
     max-width: 18ch;
-    font-variation-settings: "opsz" 144;
   }
   .page-hero h1 em { font-style: italic; color: var(--amber-soft); }
   .page-hero .lede {
@@ -186,9 +188,9 @@
 
   /* FORM */
   .form-eyebrow {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--steel);
@@ -198,14 +200,15 @@
     gap: 12px;
   }
   .form-eyebrow .num {
-    font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber);
+    font-family: var(--font-heading); font-style: italic; font-size: 14px; color: var(--amber);
+    font-weight: 600;
   }
   .form-title {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(30px, 3.6vw, 44px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(27.6px, 3.3vw, 40.5px);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin-bottom: 20px;
   }
   .form-title em { font-style: italic; color: var(--navy); }
@@ -222,12 +225,12 @@
   .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
   @media (max-width: 540px) { .field-row { grid-template-columns: 1fr; } }
   .field label {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--steel);
-    font-weight: 500;
+    font-weight: 600;
   }
   .field label .req { color: var(--amber); }
   .field input,
@@ -238,7 +241,7 @@
     border-bottom: 1px solid rgba(10,13,16,0.25);
     padding: 12px 0 14px;
     font-size: 16px;
-    font-family: var(--sans);
+    font-family: var(--font-body);
     color: var(--ink);
     transition: border-color 0.2s;
     width: 100%;
@@ -253,7 +256,7 @@
   .field textarea {
     resize: vertical;
     min-height: 120px;
-    font-family: var(--sans);
+    font-family: var(--font-body);
     line-height: 1.5;
   }
   .field select {
@@ -288,7 +291,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.2s;
-    font-family: var(--sans);
+    font-family: var(--font-body);
     justify-self: start;
     margin-top: 16px;
   }
@@ -315,9 +318,9 @@
     }
   }
   .direct-eyebrow {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--steel);
@@ -351,14 +354,14 @@
     text-transform: uppercase;
     color: var(--steel);
     margin-bottom: 4px;
-    font-weight: 500;
+    font-weight: 600;
   }
   .direct-row .val {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 18px;
     line-height: 1.4;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
     /* Long email address wraps cleanly rather than overflowing */
     word-break: break-word;
   }
@@ -379,21 +382,22 @@
   }
   .faq .container { position: relative; z-index: 2; }
   .faq-eyebrow {
-    font-family: var(--sans);
+    font-family: var(--font-body);
     font-size: 11px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(244,241,234,0.55);
     margin-bottom: 20px;
     display: flex; align-items: center; gap: 12px;
+    font-weight: 600;
   }
-  .faq-eyebrow .num { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--amber-soft); }
+  .faq-eyebrow .num { font-family: var(--font-heading); font-style: italic; font-size: 14px; color: var(--amber-soft); font-weight: 600; }
   .faq-title {
-    font-family: var(--serif);
-    font-weight: 350;
-    font-size: clamp(30px, 3.6vw, 48px);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: clamp(27.6px, 3.3vw, 44.2px);
+    line-height: 1.1;
+    letter-spacing: -0.012em;
     margin-bottom: 64px;
     max-width: 22ch;
   }
@@ -412,11 +416,11 @@
     .faq-item { grid-template-columns: 1fr; gap: 12px; }
   }
   .faq-item h4 {
-    font-family: var(--serif);
-    font-weight: 400;
+    font-family: var(--font-heading);
+    font-weight: 600;
     font-size: 22px;
     line-height: 1.2;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.006em;
   }
   .faq-item p {
     font-size: 15.5px;
@@ -433,8 +437,8 @@
   .footer-brand img { height: 60px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
   .footer-col h6 {
-    font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--paper); margin-bottom: 20px; font-weight: 500;
+    font-family: var(--font-body); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper); margin-bottom: 20px; font-weight: 600;
   }
   .footer-col ul { list-style: none; }
   .footer-col li { margin-bottom: 12px; font-size: 14px; }
@@ -464,7 +468,7 @@
   .cookie-actions { display: flex; gap: 12px; flex-shrink: 0; }
   .cookie-btn {
     padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; font-family: var(--sans);
+    cursor: pointer; transition: all 0.2s; font-family: var(--font-body);
   }
   .cookie-btn-accept { background: var(--paper); color: var(--ink); border: none; }
   .cookie-btn-accept:hover { opacity: 0.9; }
@@ -511,7 +515,7 @@
       <span class="sep">/</span>
       <span style="color: var(--paper);">Contact</span>
     </div>
-    <h1>Let&rsquo;s start the conversation.</h1>
+    <h1>Let&rsquo;s start <span class="nobr">the conversation.</span></h1>
     <p class="lede">Whether you&rsquo;re considering a search, scoping a market mapping engagement, or just want a discreet view on the talent landscape — drop a note below or pick up the phone. We'll respond within a working day.</p>
   </div>
 </section>

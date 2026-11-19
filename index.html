@@ -74,7 +74,7 @@
   }
   nav.top .row { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { display: flex; align-items: center; gap: 12px; }
-  .nav-logo img { height: 28px; width: auto; }
+  .nav-logo img { height: 46px; width: auto; }
   .nav-links { display: flex; gap: 36px; align-items: center; font-size: 14px; font-weight: 400; }
   .nav-links a { color: var(--paper); opacity: 0.7; transition: opacity 0.2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; }
@@ -140,7 +140,7 @@
     content: '';
     position: absolute; inset: 0;
     background-image:
-      radial-gradient(ellipse at 80% 20%, rgba(212, 130, 58, 0.12), transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(60,72,210,0.12), transparent 50%),
       radial-gradient(ellipse at 10% 80%, rgba(17, 38, 74, 0.4), transparent 60%);
     pointer-events: none;
   }
@@ -427,7 +427,7 @@
   .cta-card::before {
     content: ''; position: absolute; top: -100px; right: -100px;
     width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(212,130,58,0.3), transparent 60%);
+    background: radial-gradient(circle, rgba(60,72,210,0.3), transparent 60%);
     pointer-events: none;
   }
   @media (max-width: 960px) { .cta-card { grid-template-columns: 1fr; padding: 56px 40px; gap: 32px; } }
@@ -458,7 +458,7 @@
   .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 64px; }
   @media (max-width: 960px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
   @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
-  .footer-brand img { height: 36px; width: auto; margin-bottom: 24px; }
+  .footer-brand img { height: 60px; width: auto; margin-bottom: 24px; }
   .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 38ch; }
   .footer-col h6 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--paper); margin-bottom: 20px; font-weight: 500; }
   .footer-col ul { list-style: none; }
@@ -512,7 +512,7 @@
         "url": "https://www.penleighinternational.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.penleighinternational.com/assets/logo-long-dark.webp"
+          "url": "https://www.penleighinternational.com/assets/brand/penleigh-primary-blue.svg"
         },
         "description": "Retained executive search firm specialising in the global midstream and subsea inspection markets.",
         "foundingDate": "2020",
@@ -587,7 +587,7 @@
 <nav class="top">
   <div class="container row">
     <a href="#top" class="nav-logo">
-      <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+      <img src="/assets/brand/penleigh-primary-white.svg" alt="Penleigh International" />
     </a>
     <div class="nav-links">
       <a href="about.html">About</a>
@@ -625,7 +625,7 @@
         </div>
       </div>
       <div class="hero-visual">
-        <img src="/assets/logo-mark-light.webp" alt="" aria-hidden="true" />
+        <img src="/assets/brand/penleigh-mark-white.svg" alt="" aria-hidden="true" />
       </div>
     </div>
   </div>
@@ -843,28 +843,30 @@
     </div>
     <div class="logo-strip-wrap" aria-label="Client logos">
       <div class="logo-strip" aria-hidden="true">
-      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/tsc-subsea.png" alt="TSC Subsea" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/skipper-ndt.avif" alt="SKIPPER NDT" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/nexxis.png" alt="Nexxis" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/test-subsea.png" alt="TSC Subsea" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/skipper-ndt.avif" alt="SKIPPER NDT" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" /></div>
-      <div class="logo-strip-item"><img src="/assets/logos/nexxis.png" alt="Nexxis" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/tsc-subsea.png" alt="TSC Subsea" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/evcam.png" alt="EV" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/skipper-ndt.avif" alt="SKIPPER NDT" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/nexxis.png" alt="Nexxis" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/irth.png" alt="Irth Solutions" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/stats.png" alt="STATS Group" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/ndt.png" alt="NDT Global" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/tsc-subsea.png" alt="TSC Subsea" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/evcam.png" alt="EV" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/skipper-ndt.avif" alt="SKIPPER NDT" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/sonomatic.png" alt="Sonomatic" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/entegra.png" alt="Entegra" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/rosen-logo.svg" alt="ROSEN Group" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/intero.png" alt="Intero Integrity" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/halliburton.svg" alt="Halliburton" onerror="this.parentNode.style.display='none'" /></div>
+      <div class="logo-strip-item"><img src="/assets/logos/nexxis.png" alt="Nexxis" onerror="this.parentNode.style.display='none'" /></div>
       </div>
     </div>
 
@@ -903,7 +905,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/logo-long-light.webp" alt="Penleigh International" />
+        <img src="/assets/brand/penleigh-primary-white.svg" alt="Penleigh International" />
         <p>Retained executive search for the global midstream and subsea inspection markets.</p>
       </div>
       <div class="footer-col">
